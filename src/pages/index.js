@@ -1,15 +1,32 @@
-import React from "react"
-import "./styles.css"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Layout from '../components/Layout'
+import './styles.sass'
 
-export default () => (
-  <div id="index-container">
-    <div style={{ textAlign: "center", paddingTop: "150px" }}>
-      {/* <img
-        src="https://app.blogwise.co/static/media/logo.243ba0ff.png"
-        style={{ height: "60px" }}
-        alt="Blogwise"
-      /> */}
-      <h1>blogwise is coming soon to a universe near you</h1>
+const Index = ({ data }) => (
+  <Layout>
+    <div id="index-container">
+      <Img
+        fixed={data.file.childImageSharp.fixed}
+        style={{ position: 'absolute' }}
+        alt="Woman with megaphone"
+        className="upperSwoosh"
+      />
     </div>
-  </div>
+  </Layout>
 )
+
+export default Index
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    file(absolutePath: { regex: "//assets/index-upperSwoosh.png/" }) {
+      childImageSharp {
+        fixed(height: 800) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
