@@ -1,0 +1,103 @@
+.howcard-items
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-right: 50px
+  @media (max-width: 1120px)
+    margin-bottom: 50px
+    flex-direction: row
+  .howcard-top
+    display: flex
+    flex-direction: row
+    @media (max-width: 1120px)
+      flex-direction: column
+    @media (max-width: 600px)
+      margin-left: -100px
+    .howcard-stepcounter
+      margin-left: 24px !important
+      color: #d6d6d6
+      margin-bottom: 2px
+      @media (max-width: 1120px)
+        font-size: 40px
+        margin-right: 20px
+        margin-left: 0px
+        text-align: right
+    .howcard-dots
+      position: absolute
+      margin-left: 50px
+      width: 375px
+      @media (max-width: 1120px)
+        position: relative
+        margin-left: 0px
+        margin-top: 150px
+        margin-right: -145px
+        height: 25px
+        transform: rotate(270deg)
+
+  .howcard-container
+    width: 350px
+    height: 400px
+    box-shadow: 3px 3px 4px 2px #E9E9E9
+    display: flex
+    flex-direction: column
+    align-items: center
+    @media (max-width: 600px)
+      width: 275px
+      height: 350px
+    span
+      margin-top: 30px
+      font-size: 18px
+      font-weight: 600
+  
+#features-container
+  padding-bottom: 100px
+
+  .sectionone-header
+    top: 150px
+    right: 10%
+    height: 450px
+    width: 470px
+    @media (max-width: 1100px)
+      right: 20px
+    @media (max-width: 1000px)
+      display: none !important
+
+  #sectionone-container
+    padding: 40px 12% 200px
+    height: 400px
+    width: 500px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @media (max-width: 1200px)
+      padding: 40px 5% 200px
+    @media (max-width: 600px)
+      padding-bottom: 100px
+      width: 90%
+    h1
+      font-family: Nunito
+      font-size: 40px
+      padding-bottom: 10px
+    p
+      width: 400px
+      font-size: 18px
+      margin-top: -1px
+      @media (max-width: 600px)
+        width: 90%
+    .yellow-button
+      margin-top: 30px
+      width: 157px
+
+  #sectiontwo-container
+    padding: 0px 12% 100px
+    display: flex
+    flex-direction: column
+    align-items: center
+    #sectiontwo-header
+      font-size: 28px
+      margin-bottom: 50px
+    #howcards
+      display: flex
+      flex-direction: row
+      @media (max-width: 1120px)
+        flex-direction: column

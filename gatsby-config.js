@@ -23,5 +23,6 @@ module.exports = {
         fonts: [`Source Serif Pro`, `Nunito:300,600,700`],
       },
     },
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

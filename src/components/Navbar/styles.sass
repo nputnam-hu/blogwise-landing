@@ -1,11 +1,25 @@
 #navbar-container
-  padding: 30px 25px
+  padding: 20px 25px
   display: flex
   flex-direction: row
   align-items: center
   justify-content: space-between
+  @media (max-width: 900px)
+    background: #67b4f9
+
+    .navbar-link
+      margin-right: 50px
+      text-transform: lowercase
+      font-size: 18px
+      font-weight: 600
+      text-decoration: none
+      color: black
+      font-family: Nunito
+
   nav
     padding-right: 20px
+    @media (max-width: 900px)
+      display: none
     a
       font-size: 18px
       font-weight: 600
@@ -25,4 +39,24 @@
       color: white
       text-transform: uppercase
       letter-spacing: 1.6px
-      
+
+  .bm-burger-bars
+    background: white
+
+#nav-mobile
+  display: none !important
+  @media (max-width: 900px)
+    display: inline !important
+    font-size: 22px
+
+  .bm-menu-wrap
+    overflow-y: hidden
+
+  .navbar-link-mobile
+    text-transform: lowercase
+    text-decoration: none
+    font-family: Nunito
+    font-size: 24px
+    font-weight: 600
+    margin-top: 20px
+    color: #333
