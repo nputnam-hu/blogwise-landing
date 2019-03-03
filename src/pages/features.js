@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import dots from './dots.svg'
 import './features.sass'
 
-const HowCard = ({ stepNumber, title, last }) => (
+const HowCard = ({ stepNumber, title, description, imgFluid, last }) => (
   <div className="howcard-items">
     <div className="howcard-top">
       <h2
@@ -23,12 +23,27 @@ const HowCard = ({ stepNumber, title, last }) => (
     </div>
     <div className="howcard-container">
       <span>{title}</span>
+      <Img fluid={imgFluid} alt={title} className="howcard-img" />
+      <p>{description}</p>
+    </div>
+  </div>
+)
+
+const FeatureSection = ({ imgFluid, title, description, reversed }) => (
+  <div
+    className="featuresection-container"
+    style={{ flexDirection: reversed ? 'row-reverse' : 'row' }}
+  >
+    <Img fluid={imgFluid} alt={title} className="featuresection-img" />
+    <div className="featuresection-text">
+      <h1>{title}</h1>
+      <p>{description}</p>
     </div>
   </div>
 )
 
 const scrollToFeature = () => {
-  document.querySelector('#features-header').scrollIntoView({
+  document.querySelector('.featuresection-container').scrollIntoView({
     behavior: 'smooth',
   })
 }
@@ -64,12 +79,54 @@ const Features = ({ data }) => (
       <div id="sectiontwo-container">
         <h2 id="sectiontwo-header">Here&rsquo;s how it works</h2>
         <div id="howcards">
-          <HowCard stepNumber="1" title="Fill in some info" />
-          <HowCard stepNumber="2" title="Upload your brand assets" />
-          <HowCard stepNumber="3" title="Start writing!" last />
+          <HowCard
+            stepNumber="1"
+            title="Fill in some info"
+            description="Fill in information about your business and what you want your blog to be about."
+            imgFluid={data.fillin.childImageSharp.fluid}
+          />
+          <HowCard
+            stepNumber="2"
+            title="Upload your brand assets"
+            description="Customize your blog by uploading your logo and other assets."
+            imgFluid={data.cloud.childImageSharp.fluid}
+          />
+          <HowCard
+            stepNumber="3"
+            title="Start writing!"
+            description="Make use of our blogwise writing suite of tools to write content to reach your customers."
+            imgFluid={data.writing.childImageSharp.fluid}
+            last
+          />
         </div>
       </div>
-      <h2 id="features-header">Features</h2>
+      <div id="sectionthree-container">
+        <h2 id="features-header">Features</h2>
+        <FeatureSection
+          title="Feature name"
+          description="blogwise is built with the latest web technology to be up to twice as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
+          imgFluid={data.feature1.childImageSharp.fluid}
+        />
+        <div style={{ height: 100 }} />
+        <FeatureSection
+          title="Feature name"
+          description="blogwise is built with the latest web technology to be up to twice as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
+          imgFluid={data.feature1.childImageSharp.fluid}
+          reversed
+        />
+      </div>
+      <div id="sectionfour-container">
+        <h1>Companies that use blogwise</h1>
+        <div id="sectionfour-imgs">
+          {data.companies.edges.map(({ node }) => (
+            <Img
+              fixed={node.childImageSharp.fixed}
+              alt={node.name}
+              className="sectionfour-img"
+            />
+          ))}
+        </div>
+      </div>
     </div>
   </Layout>
 )
@@ -82,6 +139,48 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxHeight: 450) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    feature1: file(absolutePath: { regex: "//assets/megaphone.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    cloud: file(absolutePath: { regex: "//assets/cloud.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 225) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fillin: file(absolutePath: { regex: "//assets/fillin.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 225) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    writing: file(absolutePath: { regex: "//assets/writing.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 225) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    companies: allFile(
+      filter: { absolutePath: { regex: "//assets/companies/" } }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fixed(height: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
         }
       }
     }

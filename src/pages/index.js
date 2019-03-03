@@ -24,16 +24,22 @@ const Index = ({ data }) => (
           className="mobile-headerPhoto"
         />
         <p>
-          blogwise is the easiest way to a blog for your business. Sign up in
-          minutes to get a world-class site hosted under your own domain.
+          blogwise is the easiest way to create a blog for your business. Sign
+          up in minutes to get a world-class site hosted under your own domain.
         </p>
         <p>
-          Writing great content is hard. Having a great blog doesn’t have to be.
+          Building a great product is hard. Having a great blog doesn’t have to
+          be.{' '}
+        </p>
+        <p>
+          We're launching in late March. Email support@blogwise.co if you'd like
+          to to sign up as a beta user.
         </p>
         <div style={{ paddingBottom: '50px' }} />
-        <a className="yellow-button sectionone" href="https://app.blogwise.co">
+        {/* <a className="yellow-button sectionone" href="https://app.blogwise.co">
           Get Started
-        </a>
+        </a> */}
+        <a className="yellow-button sectionone">Coming Soon</a>
       </div>
       <div id="sectiontwo-container">
         <div id="sectiontwo-text">

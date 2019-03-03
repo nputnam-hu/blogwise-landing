@@ -31,8 +31,14 @@ const Navbar = ({ logoFixed }) => (
         >
           Blog
         </a>
-        <a className="button-blue" href="https://app.blogwise.co/register">
+        {/* <a className="button-blue" href="https://app.blogwise.co/register">
           Sign Up
+        </a> */}
+        <a
+          className="button-blue"
+          href="mailto:support@blogwise.co?subject=Blogwise Beta Inquiry"
+        >
+          Apply For Beta
         </a>
       </nav>
     </div>
