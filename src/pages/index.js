@@ -15,6 +15,7 @@ const Index = ({ data }) => (
         className="upperSwoosh"
       />
       <div id="sectionone-container">
+        <div style={{ height: '4vh' }} />
         <h1>You made the perfect product.</h1>
         <h1>Time to tell everyone.</h1>
         <div style={{ paddingBottom: '60px' }} />
