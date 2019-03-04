@@ -39,7 +39,13 @@ const Index = ({ data }) => (
         {/* <a className="yellow-button sectionone" href="https://app.blogwise.co">
           Get Started
         </a> */}
-        <a className="yellow-button sectionone">Coming Soon</a>
+        {/* <a className="yellow-button sectionone">Coming Soon</a> */}
+        <a
+          className="yellow-button"
+          href="mailto:support@blogwise.co?subject=Blogwise Beta Inquiry"
+        >
+          Apply For Beta
+        </a>
       </div>
       <div id="sectiontwo-container">
         <div id="sectiontwo-text">
@@ -75,9 +81,15 @@ const Index = ({ data }) => (
         <h1>Content Marketing is the Future</h1>
         <h2>Are you ready to blogwise?</h2>
         <br />
-        <Link className="yellow-button" to="/features">
+        {/* <Link className="yellow-button" to="/features">
           Explore Features
-        </Link>
+        </Link> */}
+        <a
+          className="yellow-button"
+          href="mailto:support@blogwise.co?subject=Blogwise Beta Inquiry"
+        >
+          Apply For Beta
+        </a>
       </div>
     </div>
   </Layout>

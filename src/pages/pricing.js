@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import lightning from './lightning.png'
@@ -96,7 +96,10 @@ const Pricing = ({ data }) => (
       </div>
       <div id="sectiontwo-container">
         <h1>Not sure what plan is best for you?</h1>
-        <span>Start with a free blog and upgrade latere</span>
+        <span>Start with a free blog and upgrade later</span>
+        <a href="https://app.blogwise.co" className="yellow-button">
+          Get Started
+        </a>
       </div>
     </div>
   </Layout>
