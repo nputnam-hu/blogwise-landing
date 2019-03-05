@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Blogwise — Build a fast, beautiful blog in minutes',
+    title: 'blogwise — Build a fast, beautiful blog in minutes',
     description:
-      'Blogwise is a blazing fast blogging platform that provides you professional blogs and tools to write great content',
+      'blogwise is a blazing fast blogging platform that provides you professional blogs and tools to write great content',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
