@@ -100,41 +100,35 @@ export default Index
 
 export const pageQuery = graphql`
   query IndexQuery {
-    upperSwoosh: file(
-      absolutePath: { regex: "//assets/index-upperSwoosh.png/" }
-    ) {
+    upperSwoosh: file(relativePath: { eq: "index-upperSwoosh.png" }) {
       childImageSharp {
         fluid(maxHeight: 900) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    mobile: file(absolutePath: { regex: "//assets/megaphone.png/" }) {
+    mobile: file(relativePath: { eq: "megaphone.png" }) {
       childImageSharp {
         fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    midSwoosh: file(absolutePath: { regex: "//assets/index-midSwoosh.png/" }) {
+    midSwoosh: file(relativePath: { eq: "index-midSwoosh.png" }) {
       childImageSharp {
         fluid(maxHeight: 500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    screenshot1: file(
-      absolutePath: { regex: "//assets/index-screenshot1.png/" }
-    ) {
+    screenshot1: file(relativePath: { eq: "index-screenshot1.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    screenshot2: file(
-      absolutePath: { regex: "//assets/index-screenshot2.png/" }
-    ) {
+    screenshot2: file(relativePath: { eq: "index-screenshot2.png" }) {
       childImageSharp {
         fluid(maxWidth: 550) {
           ...GatsbyImageSharpFluid

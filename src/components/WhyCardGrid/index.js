@@ -9,28 +9,28 @@ const WhyCardGrid = () => (
   <StaticQuery
     query={graphql`
       query WhyCardGridQuery {
-        ligtning: file(absolutePath: { regex: "//assets/lightning.png/" }) {
+        ligtning: file(relativePath: { eq: "lightning.png" }) {
           childImageSharp {
             fixed(width: 150) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        pointer: file(absolutePath: { regex: "//assets/pointer.png/" }) {
+        pointer: file(relativePath: { eq: "pointer.png" }) {
           childImageSharp {
             fixed(width: 150) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        search: file(absolutePath: { regex: "//assets/search.png/" }) {
+        search: file(relativePath: { eq: "search.png" }) {
           childImageSharp {
             fixed(width: 150) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        design: file(absolutePath: { regex: "//assets/design.png/" }) {
+        design: file(relativePath: { eq: "design.png" }) {
           childImageSharp {
             fixed(width: 150) {
               ...GatsbyImageSharpFixed

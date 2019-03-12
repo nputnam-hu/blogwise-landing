@@ -109,18 +109,14 @@ export default Pricing
 
 export const pageQuery = graphql`
   query PricingQuery {
-    leftSwoosh: file(
-      absolutePath: { regex: "//assets/pricing-leftSwoosh.png/" }
-    ) {
+    leftSwoosh: file(relativePath: { eq: "pricing-leftSwoosh.png" }) {
       childImageSharp {
         fixed(height: 525) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    rightSwoosh: file(
-      absolutePath: { regex: "//assets/pricing-rightSwoosh.png/" }
-    ) {
+    rightSwoosh: file(relativePath: { eq: "pricing-rightSwoosh.png" }) {
       childImageSharp {
         fixed(height: 450) {
           ...GatsbyImageSharpFixed
