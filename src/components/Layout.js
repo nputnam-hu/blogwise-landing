@@ -31,21 +31,21 @@ const TemplateWrapper = ({ children }) => (
             }
           }
         }
-        twitter: file(relativePath: { eq: "twitter.png" }) {
+        twitter: file(relativePath: { eq: "social/twitter.png" }) {
           childImageSharp {
             fixed(height: 23) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        facebook: file(relativePath: { eq: "facebook.png" }) {
+        facebook: file(relativePath: { eq: "social/facebook.png" }) {
           childImageSharp {
             fixed(height: 23) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        linkedin: file(relativePath: { eq: "linkedin.png" }) {
+        linkedin: file(relativePath: { eq: "social/linkedin.png" }) {
           childImageSharp {
             fixed(height: 23) {
               ...GatsbyImageSharpFixed
