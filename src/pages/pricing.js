@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import lightning from './lightning.png'
-import './pricing.sass'
+import styles from '../styles/pricing.module.sass'
 
 const PricingCard = ({
   bgColor,
@@ -14,14 +14,16 @@ const PricingCard = ({
   branding,
   description,
 }) => (
-  <div className="pricingcard-container">
-    <div className="pricingcard-top" style={{ background: bgColor }}>
+  <div className={styles.pricingcard}>
+    <div className={styles.pricingcard__top} style={{ background: bgColor }}>
       <h2>{name}</h2>
     </div>
-    <div className="pricingcard-bottom">
+    <div className={styles.pricingcard__bottom}>
       <h1>${price}</h1>
-      <span className="permonth">per month, billed monthly</span>
-      <ul className="pricingcard-list">
+      <span className={styles.pricingcard__permonth}>
+        per month, billed monthly
+      </span>
+      <ul className={styles.pricingcard__list}>
         <li>
           <img src={lightning} alt="Bullet Point" />
           <span>
@@ -38,7 +40,7 @@ const PricingCard = ({
           <span>{branding ? 'blogwise branding' : 'ad free'}</span>
         </li>
       </ul>
-      <span className="pricingcard-description">{description}</span>
+      <span className={styles.pricingcard__description}>{description}</span>
     </div>
   </div>
 )
@@ -49,17 +51,17 @@ const Pricing = ({ data }) => (
       fixed={data.leftSwoosh.childImageSharp.fixed}
       style={{ position: 'absolute' }}
       alt="Left Swoosh"
-      className="leftSwoosh"
+      className={styles.leftSwoosh}
     />
     <Img
       fixed={data.rightSwoosh.childImageSharp.fixed}
       style={{ position: 'absolute' }}
       alt="Right Swoosh"
-      className="rightSwoosh"
+      className={styles.rightSwoosh}
     />
-    <div id="pricing-container">
+    <div className={styles.pricing}>
       <h1>Pricing Options</h1>
-      <div id="pricingcards">
+      <div className={styles.pricingcards}>
         <PricingCard
           bgColor="rgba(204, 204, 204, 0.42)"
           name="Free"
@@ -94,7 +96,7 @@ const Pricing = ({ data }) => (
           description="for businesses killing the marketing game"
         />
       </div>
-      <div id="sectiontwo-container">
+      <div className={styles.sectiontwo}>
         <h1>Not sure what plan is best for you?</h1>
         <span>Start with a free blog and upgrade later</span>
         <a href="https://app.blogwise.co" className="yellow-button">
