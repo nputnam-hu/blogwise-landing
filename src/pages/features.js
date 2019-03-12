@@ -135,44 +135,42 @@ export default Features
 
 export const pageQuery = graphql`
   query FeaturesQuery {
-    sectiononeHeader: file(absolutePath: { regex: "//assets/megaphone.png/" }) {
+    sectiononeHeader: file(relativePath: { eq: "megaphone.png" }) {
       childImageSharp {
         fluid(maxHeight: 450) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    feature1: file(absolutePath: { regex: "//assets/megaphone.png/" }) {
+    feature1: file(relativePath: { eq: "megaphone.png" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    cloud: file(absolutePath: { regex: "//assets/cloud.png/" }) {
+    cloud: file(relativePath: { eq: "cloud.png" }) {
       childImageSharp {
         fluid(maxWidth: 225) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    fillin: file(absolutePath: { regex: "//assets/fillin.png/" }) {
+    fillin: file(relativePath: { eq: "fillin.png" }) {
       childImageSharp {
         fluid(maxWidth: 225) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    writing: file(absolutePath: { regex: "//assets/writing.png/" }) {
+    writing: file(relativePath: { eq: "writing.png" }) {
       childImageSharp {
         fluid(maxWidth: 225) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    companies: allFile(
-      filter: { absolutePath: { regex: "//assets/companies/" } }
-    ) {
+    companies: allFile(filter: { relativePath: { regex: "/companies/" } }) {
       edges {
         node {
           name
