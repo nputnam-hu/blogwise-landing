@@ -8,11 +8,10 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/assets`,
-        name: 'assets',
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     'gatsby-plugin-sharp',

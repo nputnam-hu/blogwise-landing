@@ -17,37 +17,35 @@ const TemplateWrapper = ({ children }) => (
             description
           }
         }
-        navbarLogo: file(absolutePath: { regex: "//assets/logo.png/" }) {
+        navbarLogo: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
             fixed(height: 52) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        footerLogo: file(
-          absolutePath: { regex: "//assets/logo-sqaureMark.png/" }
-        ) {
+        footerLogo: file(relativePath: { eq: "logo-sqaureMark.png" }) {
           childImageSharp {
             fixed(height: 60) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        twitter: file(absolutePath: { regex: "//assets/twitter.png/" }) {
+        twitter: file(relativePath: { eq: "twitter.png" }) {
           childImageSharp {
             fixed(height: 23) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        facebook: file(absolutePath: { regex: "//assets/facebook.png/" }) {
+        facebook: file(relativePath: { eq: "facebook.png" }) {
           childImageSharp {
             fixed(height: 23) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        linkedin: file(absolutePath: { regex: "//assets/linkedin.png/" }) {
+        linkedin: file(relativePath: { eq: "linkedin.png" }) {
           childImageSharp {
             fixed(height: 23) {
               ...GatsbyImageSharpFixed
