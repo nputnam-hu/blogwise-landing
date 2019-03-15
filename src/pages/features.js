@@ -1,15 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+
 import Layout from '../components/Layout'
-import dots from './dots.svg'
-import './features.sass'
+
+import dots from '../images/dots.svg'
+import styles from '../styles/features.module.sass'
 
 const HowCard = ({ stepNumber, title, description, imgFluid, last }) => (
-  <div className="howcard-items">
-    <div className="howcard-top">
+  <div className={styles.howCard}>
+    <div className={styles.howCard__top}>
       <h2
-        className="howcard-stepcounter"
+        className={styles.howCard__stepcounter}
         style={last ? {} : { marginLeft: '30px' }}
       >
         {stepNumber}
@@ -17,13 +19,13 @@ const HowCard = ({ stepNumber, title, description, imgFluid, last }) => (
       <img
         style={last && { visibility: 'hidden' }}
         src={dots}
-        className="howcard-dots"
+        className={styles.howCard__dots}
         alt="dots"
       />
     </div>
-    <div className="howcard-container">
+    <div className={styles.howCard__bottom}>
       <span>{title}</span>
-      <Img fluid={imgFluid} alt={title} className="howcard-img" />
+      <Img fluid={imgFluid} alt={title} className={styles.howCard__img} />
       <p>{description}</p>
     </div>
   </div>
@@ -31,11 +33,11 @@ const HowCard = ({ stepNumber, title, description, imgFluid, last }) => (
 
 const FeatureSection = ({ imgFluid, title, description, reversed }) => (
   <div
-    className="featuresection-container"
+    className={styles.feature}
     style={{ flexDirection: reversed ? 'row-reverse' : 'row' }}
   >
-    <Img fluid={imgFluid} alt={title} className="featuresection-img" />
-    <div className="featuresection-text">
+    <Img fluid={imgFluid} alt={title} className={styles.feature__img} />
+    <div className={styles.feature__text}>
       <h1>{title}</h1>
       <p>{description}</p>
     </div>
@@ -50,13 +52,13 @@ const scrollToFeature = () => {
 
 const Features = ({ data }) => (
   <Layout>
-    <div id="features-container">
+    <div className={styles.features}>
       <Img
         fluid={data.sectiononeHeader.childImageSharp.fluid}
         style={{ position: 'absolute' }}
-        className="sectionone-header"
+        className={styles.header__photo}
       />
-      <div id="sectionone-container">
+      <div className={styles.header}>
         <h1>The lightning fast way to start content marketing</h1>
         <p>
           <b>
@@ -67,7 +69,7 @@ const Features = ({ data }) => (
           drive engagement and build your brand.
         </p>
         <div
-          className="yellow-button"
+          className={styles.yellowButton}
           onClick={scrollToFeature}
           onKeyDown={scrollToFeature}
           role="button"
@@ -76,9 +78,11 @@ const Features = ({ data }) => (
           Explore Features
         </div>
       </div>
-      <div id="sectiontwo-container">
-        <h2 id="sectiontwo-header">Here&rsquo;s how it works</h2>
-        <div id="howcards">
+      <div className={styles.howItWorksSection}>
+        <h2 className={styles.howItWorksSection__header}>
+          Here&rsquo;s how it works
+        </h2>
+        <div className={styles.howItWorksSection__howCards}>
           <HowCard
             stepNumber="1"
             title="Fill in some info"
@@ -100,8 +104,8 @@ const Features = ({ data }) => (
           />
         </div>
       </div>
-      <div id="sectionthree-container">
-        <h2 id="features-header">Features</h2>
+      <div className={styles.featuresSection}>
+        <h2 className={styles.featuresSection__title}>Features</h2>
         <FeatureSection
           title="Feature name"
           description="blogwise is built with the latest web technology to be up to twice as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
@@ -115,14 +119,14 @@ const Features = ({ data }) => (
           reversed
         />
       </div>
-      <div id="sectionfour-container">
+      <div className={styles.companiesSection}>
         <h1>Companies that use blogwise</h1>
-        <div id="sectionfour-imgs">
+        <div className={styles.companiesSection__imgs}>
           {data.companies.edges.map(({ node }) => (
             <Img
               fixed={node.childImageSharp.fixed}
               alt={node.name}
-              className="sectionfour-img"
+              className={styles.companiesSection__img}
             />
           ))}
         </div>

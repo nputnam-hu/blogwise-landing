@@ -1,3 +1,29 @@
+@import global
+
+//////////////////
+// Pricing Page //
+//////////////////
+.pricing
+  padding: 20px 10% 200px
+  display: flex
+  flex-direction: column
+  align-items: center
+  h1
+    font-weight: 300
+    padding-bottom: 40px
+.pricingCards
+  display: flex
+  flex-direction: row
+  @media (max-width: 1250px)
+    flex-direction: column
+    .pricingCard-container
+      margin-bottom: 30px  
+  .pricingCard-container
+    margin-right: 15px
+
+///////////////////////
+// Background Images //
+///////////////////////
 .leftSwoosh
   top: 75px
   left: 0px
@@ -8,34 +34,17 @@
   right: 0px
   z-index: -1
 
-.pricing
-  padding: 20px 10% 200px
-  display: flex
-  flex-direction: column
-  align-items: center
-  h1
-    font-weight: 300
-    padding-bottom: 40px
-
-.pricingcards
-  display: flex
-  flex-direction: row
-  @media (max-width: 1250px)
-    flex-direction: column
-    .pricingcard-container
-      margin-bottom: 30px  
-  .pricingcard-container
-    margin-right: 15px
-
-.pricingcard
+//////////////////////////////
+// Individual Pricing Cards //
+//////////////////////////////
+.pricingCard
   z-index: 10
   width: 300px
   display: flex
   flex-direction: column
   box-shadow: 4px 4px 5px 3px #E9E9E9
   margin-right: 15px
-
-.pricingcard__top
+.pricingCard__top
   padding: 2px
   display: flex
   align-items: center
@@ -43,8 +52,7 @@
   h2
     font-size: 20px
     font-weight: 300
-
-.pricingcard__bottom
+.pricingCard__bottom
   background: white
   padding: 20px 10% 60px
   display: flex
@@ -52,13 +60,11 @@
   align-items: center
   h1
     font-size: 40px
-
-.pricingcard__permonth
+.pricingCard__permonth
   margin-top: -20px
   font-size: 13px
   margin-bottom: 30px
-
-.pricingcard__list
+.pricingCard__list
   align-self: flex-start
   list-style: none
   margin-left: 0
@@ -69,13 +75,15 @@
     img
       margin-bottom: -6px
       margin-right: 15px
-
-.pricingcard__description
+.pricingCard__description
   text-align: center
   font-weight: 600
   font-size: 14px
-  
-.sectiontwo
+
+/////////////////////////
+// Get Started Section //
+/////////////////////////
+.getStartedSection
   padding: 60px 10% 0px
   display: flex
   flex-direction: column

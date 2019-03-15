@@ -1,7 +1,12 @@
+@import global
+  
 .index
   overflow-x: hidden
 
-.upperSwoosh
+////////////////////////////////
+// Index Page Landing Section //
+////////////////////////////////
+.header
   z-index: -1
   top: 0
   right: 0
@@ -22,8 +27,7 @@
     width: 312px
   @media (max-width: 900px)
     visibility: hidden
-
-.sectionone
+.header__content
   padding-left: 6%
   padding-bottom: 150px
   font-family: Nunito
@@ -53,8 +57,7 @@
     font-size: 18px
     @media (max-width: 600px)
       width: 90%
-
-.sectionone__mobileHeaderPhoto
+.header__mobile
   height: 0px
   display: none !important
   @media (max-width: 900px)
@@ -62,7 +65,10 @@
     margin-top: -20px
     margin-bottom: 20px
 
-.sectiontwo
+////////////////////
+// Middle Section //
+////////////////////
+.midSection
   padding: 400px 10vw 0px
   @media (max-width: 1300px)
     padding: 400px 2vw 0px
@@ -70,8 +76,7 @@
     padding-top: 100px
   @media (max-width: 600px)
     padding-top: 50px
-
-.sectiontwo__screenshot1
+.midSection__screenshot1
   width: 800px
   box-shadow: 3px 3px 4px 1px #E9E9E9
   @media (max-width: 800px)
@@ -82,8 +87,7 @@
     width: 400px
   @media (max-width: 400px)
     width: 375px
-
-.sectiontwo__screenshot2
+.midSection__screenshot2
   width: 550px
   z-index: 1
   box-shadow: 3px 3px 4px 1px #E9E9E9
@@ -91,8 +95,7 @@
   margin-top: -250px
   @media (max-width: 1150px)
     visibility: hidden
-
-.sectiontwo__text
+.midSection__text
   width: 300px
   padding-left: 825px
   margin-bottom: -250px
@@ -106,8 +109,7 @@
     padding-bottom: 25px
   h2
     font-size: 28px
-
-.sectiontwo__template
+.midSection__caption
   padding-top: 10px
   font-family: Nunito
   font-weight: 600
@@ -117,8 +119,7 @@
   @media (max-width: 600px)
     width: 95%
     font-size: 14px
-
-.midSwoosh
+.midSection__swoosh
   height: 500px
   width: 750px
   margin-top: -475px
@@ -132,7 +133,10 @@
     height: 250px
     width: 375px
 
-.sectionthree
+//////////////////////////
+// Why blogwise Section //
+//////////////////////////
+.whySection
   margin: 125px 10% 0px
   display: flex
   flex-direction: column
@@ -145,7 +149,10 @@
     color: #67B4F9
     margin-bottom: 50px
   
-.sectionfour
+////////////////////
+// Future Section //
+////////////////////
+.futureSection
   margin-top: 125px
   padding: 0px 5%
   height: 445px
