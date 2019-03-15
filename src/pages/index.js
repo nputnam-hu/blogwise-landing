@@ -1,20 +1,22 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
+
 import Layout from '../components/Layout'
 import WhyCardGrid from '../components/WhyCardGrid'
-import './index.sass'
+
+import styles from '../styles/index.module.sass'
 
 const Index = ({ data }) => (
   <Layout>
-    <div id="index-container">
+    <div className={styles.index}>
       <Img
         fluid={data.upperSwoosh.childImageSharp.fluid}
         style={{ position: 'absolute' }}
         alt="Woman with megaphone"
-        className="upperSwoosh"
+        className={styles.header}
       />
-      <div id="sectionone-container">
+      <div className={styles.header__content}>
         <div style={{ height: '4vh' }} />
         <h1>You made the perfect product.</h1>
         <h1>Time to tell everyone.</h1>
@@ -22,7 +24,7 @@ const Index = ({ data }) => (
         <Img
           fixed={data.mobile.childImageSharp.fixed}
           alt="cloud of blogs"
-          className="mobile-headerPhoto"
+          className={styles.header__mobile}
         />
         <p>
           blogwise is the easiest way to create a blog for your business. Sign
@@ -37,48 +39,51 @@ const Index = ({ data }) => (
           to to sign up as a beta user.
         </p>
         <div style={{ paddingBottom: '50px' }} />
-        {/* <a className="yellow-button sectionone" href="https://app.blogwise.co">
+        {/* <a
+          className={`${styles.yellowButton} sectionone`}
+          href="https://app.blogwise.co"
+        >
           Get Started
         </a> */}
-        {/* <a className="yellow-button sectionone">Coming Soon</a> */}
+        {/* <a className={`${styles.yellowButton} sectionone`}>Coming Soon</a> */}
         <a
-          className="yellow-button"
+          className={styles.yellowButton}
           href="mailto:support@blogwise.co?subject=Blogwise Beta Inquiry"
         >
           Apply For Beta
         </a>
       </div>
-      <div id="sectiontwo-container">
-        <div id="sectiontwo-text">
+      <div className={styles.midSection}>
+        <div className={styles.midSection__text}>
           <h2>Get your message out with a beautiful blog built in minutes</h2>
           <p>Like actually in minutes, no joke</p>
         </div>
         <Img
           fluid={data.screenshot1.childImageSharp.fluid}
           alt="blog demo"
-          className="screenshot1"
+          className={styles.midSection__screenshot1}
         />
-        <p id="template-explanation">
+        <p className={styles.midSection__caption}>
           Our templates autopopulate your information - <br /> so you never have
           to struggle with broken customization tools.{' '}
         </p>
         <Img
           fluid={data.screenshot2.childImageSharp.fluid}
           alt="blog demo"
-          className="screenshot2"
+          className={styles.midSection__screenshot2}
         />
       </div>
       <Img
         fluid={data.midSwoosh.childImageSharp.fluid}
         style={{ position: 'absolute' }}
         alt="swoosh"
-        className="midSwoosh"
+        className={styles.midSection__swoosh}
       />
-      <div id="sectionthree-container">
+      <div className={styles.whySection}>
         <h1>WHY BLOGWISE?</h1>
         <WhyCardGrid />
       </div>
-      <div id="sectionfour-container">
+      <div className={styles.futureSection}>
         <h1>Content Marketing is the Future</h1>
         <h2>Are you ready to blogwise?</h2>
         <br />
@@ -86,7 +91,7 @@ const Index = ({ data }) => (
           Explore Features
         </Link> */}
         <a
-          className="yellow-button"
+          className={styles.yellowButton}
           href="mailto:support@blogwise.co?subject=Blogwise Beta Inquiry"
         >
           Apply For Beta

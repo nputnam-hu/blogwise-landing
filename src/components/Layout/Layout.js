@@ -2,10 +2,10 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Navbar from '../Navbar'
+import Footer from '../Footer'
 
-import '../all.sass'
+import styles from './Layout.module.sass'
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -31,21 +31,21 @@ const TemplateWrapper = ({ children }) => (
             }
           }
         }
-        twitter: file(relativePath: { eq: "twitter.png" }) {
+        twitter: file(relativePath: { eq: "social/twitter.png" }) {
           childImageSharp {
             fixed(height: 23) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        facebook: file(relativePath: { eq: "facebook.png" }) {
+        facebook: file(relativePath: { eq: "social/facebook.png" }) {
           childImageSharp {
             fixed(height: 23) {
               ...GatsbyImageSharpFixed
             }
           }
         }
-        linkedin: file(relativePath: { eq: "linkedin.png" }) {
+        linkedin: file(relativePath: { eq: "social/linkedin.png" }) {
           childImageSharp {
             fixed(height: 23) {
               ...GatsbyImageSharpFixed
@@ -55,7 +55,7 @@ const TemplateWrapper = ({ children }) => (
       }
     `}
     render={data => (
-      <div style={{ overflowX: 'hidden', overflowY: 'scroll !important' }}>
+      <div className={styles.layout}>
         <Helmet>
           <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>
@@ -63,11 +63,10 @@ const TemplateWrapper = ({ children }) => (
             name="description"
             content={data.site.siteMetadata.description}
           />
-
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/img/favicon.ico"
+            href="/img/favicon.ico" // Intentionally left in static/img
           />
           <link
             rel="icon"
@@ -81,13 +80,12 @@ const TemplateWrapper = ({ children }) => (
             href="/img/favicon.ico"
             sizes="16x16"
           />
-
           <meta name="theme-color" content="#fff" />
-
           <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
-          <meta property="og:image" content="/img/og-image.png" />
+          {/** Intentionally left in static/img */}
+          <meta property="og:image" content="/img/og-image.png" />{' '}
         </Helmet>
         <Navbar logoFixed={data.navbarLogo.childImageSharp.fixed} />
         <div>{children}</div>
