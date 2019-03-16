@@ -1,105 +1,141 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import Layout from '../components/Layout'
 import WhyCardGrid from '../components/WhyCardGrid'
 
 import styles from '../styles/index.module.sass'
 
-const Index = ({ data }) => (
-  <Layout>
-    <div className={styles.index}>
-      <Img
-        fluid={data.upperSwoosh.childImageSharp.fluid}
-        style={{ position: 'absolute' }}
-        alt="Woman with megaphone"
-        className={styles.header}
-      />
-      <div className={styles.header__content}>
-        <div style={{ height: '4vh' }} />
-        <h1>You made the perfect product.</h1>
-        <h1>Time to tell everyone.</h1>
-        <div style={{ paddingBottom: '60px' }} />
-        <Img
-          fixed={data.mobile.childImageSharp.fixed}
-          alt="cloud of blogs"
-          className={styles.header__mobile}
-        />
-        <p>
-          blogwise is the easiest way to create a blog for your business. Sign
-          up in minutes to get a world-class site hosted under your own domain.
-        </p>
-        <p>
-          Building a great product is hard. Having a great blog doesn’t have to
-          be.{' '}
-        </p>
-        <p>
-          We're launching in late March. Email support@blogwise.co if you'd like
-          to to sign up as a beta user.
-        </p>
-        <div style={{ paddingBottom: '50px' }} />
-        {/* <a
+const scrollToBeta = () => {
+  document.querySelector('.scrollTo').scrollIntoView({
+    behavior: 'smooth',
+  })
+}
+
+class Index extends Component {
+  state = {
+    email: '',
+    emailSubmitted: false,
+  }
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value,
+    })
+  }
+  handleSubmit = async e => {
+    e.preventDefault()
+    console.log(this.state.email)
+    const res = await addToMailchimp(this.state.email, this.state)
+    console.log(res)
+    this.setState({ emailSubmitted: true })
+  }
+  render() {
+    const { data } = this.props
+    return (
+      <Layout>
+        <div className={styles.index}>
+          <Img
+            fluid={data.upperSwoosh.childImageSharp.fluid}
+            style={{ position: 'absolute' }}
+            alt="Woman with megaphone"
+            className={styles.header}
+          />
+          <div className={styles.header__content}>
+            <div style={{ height: '4vh' }} />
+            <h1>You made the perfect product.</h1>
+            <h1>Time to tell everyone.</h1>
+            <div style={{ paddingBottom: '60px' }} />
+            <Img
+              fixed={data.mobile.childImageSharp.fixed}
+              alt="cloud of blogs"
+              className={styles.header__mobile}
+            />
+            <p>
+              blogwise is the easiest way to create a blog for your business.
+              Sign up in minutes to get a world-class site hosted under your own
+              domain.
+            </p>
+            <p>
+              Building a great product is hard. Having a great blog doesn’t have
+              to be.{' '}
+            </p>
+            <div style={{ paddingBottom: '50px' }} />
+            {/* <a
           className={`${styles.yellowButton} sectionone`}
           href="https://app.blogwise.co"
         >
           Get Started
         </a> */}
-        {/* <a className={`${styles.yellowButton} sectionone`}>Coming Soon</a> */}
-        <a
-          className={styles.yellowButton}
-          href="mailto:support@blogwise.co?subject=Blogwise Beta Inquiry"
-        >
-          Apply For Beta
-        </a>
-      </div>
-      <div className={styles.midSection}>
-        <div className={styles.midSection__text}>
-          <h2>Get your message out with a beautiful blog built in minutes</h2>
-          <p>Like actually in minutes, no joke</p>
-        </div>
-        <Img
-          fluid={data.screenshot1.childImageSharp.fluid}
-          alt="blog demo"
-          className={styles.midSection__screenshot1}
-        />
-        <p className={styles.midSection__caption}>
-          Our templates autopopulate your information - <br /> so you never have
-          to struggle with broken customization tools.{' '}
-        </p>
-        <Img
-          fluid={data.screenshot2.childImageSharp.fluid}
-          alt="blog demo"
-          className={styles.midSection__screenshot2}
-        />
-      </div>
-      <Img
-        fluid={data.midSwoosh.childImageSharp.fluid}
-        style={{ position: 'absolute' }}
-        alt="swoosh"
-        className={styles.midSection__swoosh}
-      />
-      <div className={styles.whySection}>
-        <h1>WHY BLOGWISE?</h1>
-        <WhyCardGrid />
-      </div>
-      <div className={styles.futureSection}>
-        <h1>Content Marketing is the Future</h1>
-        <h2>Are you ready to blogwise?</h2>
-        <br />
-        {/* <Link className="yellow-button" to="/features">
+            {/* <a className={`${styles.yellowButton} sectionone`}>Coming Soon</a> */}
+            <button className={styles.yellowButton} onClick={scrollToBeta}>
+              Join the Waitlist
+            </button>
+          </div>
+          <div className={styles.midSection}>
+            <div className={styles.midSection__text}>
+              <h2>
+                Get your message out with a beautiful blog built in minutes
+              </h2>
+              <p>Like actually in minutes, no joke</p>
+            </div>
+            <Img
+              fluid={data.screenshot1.childImageSharp.fluid}
+              alt="blog demo"
+              className={styles.midSection__screenshot1}
+            />
+            <p className={styles.midSection__caption}>
+              Our templates autopopulate your information - <br /> so you never
+              have to struggle with broken customization tools.{' '}
+            </p>
+            <Img
+              fluid={data.screenshot2.childImageSharp.fluid}
+              alt="blog demo"
+              className={styles.midSection__screenshot2}
+            />
+          </div>
+          <Img
+            fluid={data.midSwoosh.childImageSharp.fluid}
+            style={{ position: 'absolute' }}
+            alt="swoosh"
+            className={styles.midSection__swoosh}
+          />
+          <div className={styles.whySection}>
+            <h1>WHY BLOGWISE?</h1>
+            <WhyCardGrid />
+          </div>
+          <div className={styles.futureSection}>
+            <h1 className="scrollTo">Content Marketing is the Future</h1>
+            <h2>Are you ready to blogwise?</h2>
+            <br />
+            {/* <Link className="yellow-button" to="/features">
           Explore Features
         </Link> */}
-        <a
-          className={styles.yellowButton}
-          href="mailto:support@blogwise.co?subject=Blogwise Beta Inquiry"
-        >
-          Apply For Beta
-        </a>
-      </div>
-    </div>
-  </Layout>
-)
+            <form
+              onSubmit={this.handleSubmit}
+              className={styles.futureSection__form}
+            >
+              {' '}
+              <input
+                type="email"
+                onChange={this.handleChange}
+                placeholder="your email"
+                name="email"
+                value={this.state.email}
+              />
+              <button type="submit" className={styles.yellowButton}>
+                {this.state.emailSubmitted
+                  ? 'Subscribed!'
+                  : 'Join the Waitlist Now'}
+              </button>
+            </form>
+          </div>
+        </div>
+      </Layout>
+    )
+  }
+}
 
 export default Index
 
