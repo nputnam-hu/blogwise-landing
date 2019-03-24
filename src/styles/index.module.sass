@@ -3,6 +3,7 @@
 ///////////////////////
 
 @import global
+
 $largeBreak: 'max-width: 1200px'
 $mobileBreak: 'max-width: 900px'
 $midBreak: 'max-width: 800px'
@@ -12,31 +13,63 @@ $smallBreak: 'max-width: 350px'
 .index
   overflow-x: hidden
 
+  
 ////////////////////
 // Header Section //
 ////////////////////
 
 .header
   margin-bottom: 24px
+  height: 850px
+  width: auto
+  @media (max-width: 1600px)
+    height: 800px
+    width: auto
+  @media (max-width: 1500px)
+    height: 750px
+    width: auto
+  @media (max-width: 1400px)
+    height: 700px
+    width: auto
+  @media (max-width: 1300px)
+    height: 650px
+    width: auto
+  @media (max-width: 1200px)
+    height: 466px
+    width: auto
+  @media (max-width:1100px)
+    height: auto
+    width: auto
+
   @media ($mobileBreak)
       background: $blueTheme
 
 .header__swoosh
-  z-index: -1
-  top: 0
+  top: 98px
   right: 0
-  height: 900px
-  width: 940px
-  @media (max-width: 1300px)
+  height: 850px
+  width: 880px
+  @media (max-width: 1600px)
     height: 800px
-    width: 835px
-  @media (max-width: 1200px)
+    width: 830px
+  @media (max-width: 1500px)
+    height: 750px
+    width: 780px
+  @media (max-width: 1400px)
     height: 700px
-    width: 731px
+    width: 730px
+  @media (max-width: 1300px)
+    height: 650px
+    width: 680px
+  @media (max-width: 1200px)
+    height: 466px
+    width: 485px
   @media (max-width: 1100px)
-    top: 200px
     height: 400px
-    width: 417px
+    width: 415px
+  @media (max-width: 1000px)
+    height: 388px
+    width: 403px
   @media ($mobileBreak)
     visibility: hidden
 
@@ -54,7 +87,7 @@ $smallBreak: 'max-width: 350px'
     margin-left: 0
 
 .header__content__title
-  font-size: calc(18px + 3vw)
+  @extend .headerFont
   margin-bottom: 24px
   @media ($midBreak)
     magin-top: 12px
@@ -73,11 +106,18 @@ $smallBreak: 'max-width: 350px'
     margin-bottom: 24px
 
 .header__content__body
+  @extend .bodyFont
   display: flex
   flex-direction: column
   justify-content: space-between
+  margin-top: 72px
+  margin-bottom: 72px
   width: 400px
-  font-size: calc(18px + 0.5vw)
+
+  @media (max-width: 1200px)
+    margin-top: 0px
+    margin-bottom: 12px
+
   @media ($mobileBreak) 
     text-align: center
     width: 70%
@@ -94,7 +134,7 @@ $smallBreak: 'max-width: 350px'
   margin-top: 24px
   margin-bottom: 24px
   @media ($largeBreak)
-    margin-top: 12px
+    margin-top: 0px
 
 .header__mobile
   display: none !important
@@ -105,6 +145,7 @@ $smallBreak: 'max-width: 350px'
 ////////////////////
 // Middle Section //
 ////////////////////
+  
 .midSection
   padding: 400px 10vw 0px
   @media (max-width: 1300px)
