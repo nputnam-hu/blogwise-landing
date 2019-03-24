@@ -73,27 +73,31 @@ class Index extends Component {
               </a>
             </div>
           </div>
+          {/* Middle Section */}
           <div className={styles.midSection}>
             <div className={styles.midSection__text}>
-              <h2>
-                Get your message out with a beautiful blog built in minutes
-              </h2>
-              <p>Like actually in minutes, no joke</p>
+              <div className={styles.midSection__text__title}>
+                Get your message out with a beautiful blog built in{' '}
+                <em>minutes</em>
+              </div>
+              <div className={styles.midSection__text__body}>
+                Like actually in minutes, no joke
+              </div>
+              <Img
+                fluid={data.screenshot2.childImageSharp.fluid}
+                alt="blog demo2"
+                className={styles.midSection__screenshot2}
+              />
             </div>
             <Img
               fluid={data.screenshot1.childImageSharp.fluid}
               alt="blog demo"
               className={styles.midSection__screenshot1}
             />
-            <p className={styles.midSection__caption}>
-              Our templates autopopulate your information - <br /> so you never
-              have to struggle with broken customization tools.{' '}
-            </p>
-            <Img
-              fluid={data.screenshot2.childImageSharp.fluid}
-              alt="blog demo"
-              className={styles.midSection__screenshot2}
-            />
+            <div className={styles.midSection__mobileCaption}>
+              Our templates autopopulate your information so you never have to
+              struggle with broken customization tools.{' '}
+            </div>
           </div>
           <Img
             fluid={data.midSwoosh.childImageSharp.fluid}
@@ -101,10 +105,17 @@ class Index extends Component {
             alt="swoosh"
             className={styles.midSection__swoosh}
           />
+          <div className={styles.midSection__caption}>
+            Our templates autopopulate your information - <br /> so you never
+            have to struggle with broken customization tools.{' '}
+          </div>
+          <div className={styles.postSection} />
+          {/* Why Section */}
           <div className={styles.whySection}>
             <h1>WHY BLOGWISE?</h1>
             <WhyCardGrid />
           </div>
+          {/* Future Section */}
           <div className={styles.futureSection}>
             <h1 className="scrollTo">Content Marketing is the Future</h1>
             <h2>Are you ready to blogwise?</h2>
