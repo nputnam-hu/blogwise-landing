@@ -109,7 +109,71 @@ class Index extends Component {
             Our templates autopopulate your information - <br /> so you never
             have to struggle with broken customization tools.{' '}
           </div>
-          <div className={styles.postSection} />
+          <div className={styles.postSection}>
+            <div className={styles.postSection__title}>
+              <Img
+                fluid={data.postGenius.childImageSharp.fluid}
+                alt="postgenius icon"
+                className={styles.postSection__title__image}
+              />
+              <div className={styles.postSection__title__text}>
+                <div className={styles.postSection__title__text__line1}>
+                  Not sure what to write about?
+                </div>
+                <div className={styles.postSection__title__text__line2}>
+                  Consult the{' '}
+                  <span className={styles.accentText}>PostGenius</span>
+                </div>
+                <div className={styles.postSection__title__text__line3}>
+                  PostGenius gives you the tools you need to make content fast
+                </div>
+              </div>
+            </div>
+            <div className={styles.postSection__features}>
+              <Img
+                fluid={data.cycle.childImageSharp.fluid}
+                alt="feature cylce icon"
+                className={styles.postSection__features__image}
+              />{' '}
+              <div className={styles.postSection__features__featuresList}>
+                <div className={styles.featuresList__title}>
+                  PostGenius Features
+                </div>
+                <div className={styles.featureList__cards}>
+                  <div className={styles.card}>
+                    <div className={styles.card___title}>
+                      Twitter Integration
+                    </div>
+                    <div className={styles.card__description}>
+                      Stay in the know without even having to leave blogwise.
+                      We'll automatically pull tweets that we think are relevant
+                      to you.
+                    </div>
+                  </div>
+                  <div className={`${styles.card} ${styles.stagger}`}>
+                    <div className={styles.card___title}>
+                      Headline Generator
+                    </div>
+                    <div className={styles.card__description}>
+                      Having trouble of thinking of a catchy title or topic?
+                      We've got you covered with an automated headline
+                      generator.
+                    </div>
+                  </div>
+                  <div className={styles.card}>
+                    <div className={styles.card___title}>
+                      Editorial Calendar
+                    </div>
+                    <div className={styles.card__description}>
+                      Our Editorial Calendar lets you schedule and assign posts,
+                      making planning a breeze whether you&apos;re just adding a
+                      couple posts or launching a full a campaign.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           {/* Why Section */}
           <div className={styles.whySection}>
             <h1>WHY BLOGWISE?</h1>
@@ -183,6 +247,20 @@ export const pageQuery = graphql`
     screenshot2: file(relativePath: { eq: "index-screenshot2.png" }) {
       childImageSharp {
         fluid(maxWidth: 550) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    postGenius: file(relativePath: { eq: "postGenius.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    cycle: file(relativePath: { eq: "cycle.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 700) {
           ...GatsbyImageSharpFluid
         }
       }

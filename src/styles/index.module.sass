@@ -155,6 +155,7 @@ $smallBreak: 'max-width: 350px'
   margin-left: 5%
 
   @media ($mobileBreak)
+    margin-top: 48px
     align-items: center
     flex-direction: column
     height: auto
@@ -282,6 +283,157 @@ $smallBreak: 'max-width: 350px'
     margin-top: -249px
     height: 250px
     width: 375px
+
+
+/////////////////////////
+// PostGeniius Section //
+/////////////////////////
+
+.postSection
+  margin-top: 164px
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 90%
+  
+  @media ($mobileBreak)
+    margin-top: 64px
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 90%
+
+.postSection__title
+  display: flex
+  flex-direction: row
+  text-align: center
+  align-items: center
+  justify-content: space-around
+  margin-bottom: 36px
+  width: 90%
+
+  @media ($mobileBreak)
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    justify-content: center
+    font-family: $primaryFont
+    text-align: center
+    margin-bottom: 24px
+
+.postSection__title__image
+  margin-left: 10%
+  width: 20%
+  @media ($mobileBreak)
+    margin-left: 0px
+    width: 50%
+
+.postSection__title__text
+  width: 75%
+
+  @media ($mobileBreak)
+    width: 100%
+    margin-bottom: 18px
+  
+
+.postSection__title__text__line1
+  font-size: calc(22px + 1.5vw)
+  line-height: 1.5em
+  font-weight: bold
+  @media ($mobileBreak)
+    font-size: 17px
+    line-height: 1.5em
+    font-weight: bold
+
+.postSection__title__text__line2
+  font-size: calc(24px + 1.5vw)
+  line-height: 1em
+  font-weight: bold
+  margin-bottom: 6px
+  @media ($mobileBreak)
+    font-size: 28px
+    line-height: 1em
+    font-weight: bold
+    margin-bottom: 6px
+
+.postSection__title__text__line3
+  font-size: calc(16px + 0.2vw)
+  line-height: 1em
+  @media ($mobileBreak)
+    font-size: 18px
+    line-height: 1em
+
+.postSection__features
+  display: flex
+  align-items: center
+  flex-direction: row
+  justify-content: space-around
+
+  @media ($mobileBreak)
+    flex-direction: column
+
+
+.postSection__features__image
+  display: inline
+  width: 50%
+  max-width: 600px
+  margin-bottom: 28px
+  @media ($mobileBreak)
+    display: none
+
+.postSection__features__featuresList
+  width: 45%
+  @media ($mobileBreak)
+    width: 80%
+
+.featuresList__title
+  font-family: $primaryFont
+  font-size: calc(22px + 0.5vw)
+  color: $greyTheme
+  margin-bottom: 12px
+  margin-left: -5%
+
+  @media ($mobileBreak)
+    margin-left: 0px
+    text-align: center
+
+
+
+.featureList__cards
+  display: flex
+  flex-direction: column
+  
+
+.card
+  margin-bottom: 10%
+  @media ($mobileBreak)
+    margin-bottom: 5%
+
+
+.card___title
+  font-weight: bold
+  font-size: calc(16px + 0.5vw)
+  line-height: 1em  
+  margin-bottom: 12px
+  @media ($mobileBreak)
+    margin-bottom: 0px
+
+.card__description
+  font-size: calc(14px + 0.5vw)
+  line-height: 1em
+  margin-bottom: 12px
+
+.stagger
+  margin-left: 5%
+  @media ($mobileBreak)
+    margin-left: 0px
+
 
 //////////////////////////
 // Why blogwise Section //
