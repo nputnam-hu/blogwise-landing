@@ -8,70 +8,70 @@ import WhyCardGrid from '../components/WhyCardGrid'
 
 import styles from '../styles/index.module.sass'
 
-const scrollToBeta = () => {
-  document.querySelector('.scrollTo').scrollIntoView({
-    behavior: 'smooth',
-  })
-}
-
 class Index extends Component {
   state = {
     email: '',
     emailSubmitted: false,
   }
+
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value,
     })
   }
+
   handleSubmit = async e => {
     e.preventDefault()
-    console.log(this.state.email)
-    const res = await addToMailchimp(this.state.email, this.state)
-    console.log(res)
+    await addToMailchimp(this.state.email, this.state)
     this.setState({ emailSubmitted: true })
   }
+
   render() {
     const { data } = this.props
+
     return (
       <Layout>
         <div className={styles.index}>
-          <Img
-            fluid={data.upperSwoosh.childImageSharp.fluid}
-            style={{ position: 'absolute' }}
-            alt="Woman with megaphone"
-            className={styles.header}
-          />
-          <div className={styles.header__content}>
-            <div style={{ height: '4vh' }} />
-            <h1>You made the perfect product.</h1>
-            <h1>Time to tell everyone.</h1>
-            <div style={{ paddingBottom: '60px' }} />
+          {/* Header Section */}
+          <div className={styles.header}>
             <Img
-              fixed={data.mobile.childImageSharp.fixed}
-              alt="cloud of blogs"
-              className={styles.header__mobile}
+              fluid={data.upperSwoosh.childImageSharp.fluid}
+              style={{ position: 'absolute' }}
+              alt="woman with megaphone"
+              className={styles.header__swoosh}
             />
-            <p>
-              blogwise is the easiest way to create a blog for your business.
-              Sign up in minutes to get a world-class site hosted under your own
-              domain.
-            </p>
-            <p>
-              Building a great product is hard. Having a great blog doesn’t have
-              to be.{' '}
-            </p>
-            <div style={{ paddingBottom: '50px' }} />
-            {/* <a
-          className={`${styles.yellowButton} sectionone`}
-          href="https://app.blogwise.co"
-        >
-          Get Started
-        </a> */}
-            {/* <a className={`${styles.yellowButton} sectionone`}>Coming Soon</a> */}
-            <button className={styles.yellowButton} onClick={scrollToBeta}>
-              Join the Waitlist
-            </button>
+            <div className={styles.header__content}>
+              <div className={styles.header__content__title}>
+                <div className={styles.header__content__title__line}>
+                  You made the perfect product.
+                </div>
+                <div className={styles.header__content__title__line}>
+                  Time to tell everyone.
+                </div>
+              </div>
+              <Img
+                fixed={data.mobile.childImageSharp.fixed}
+                alt="cloud of blogs"
+                className={styles.header__mobile}
+              />
+              <div className={styles.header__content__body}>
+                <div className={styles.header__content__body__line}>
+                  blogwise is the easiest way to start content marketing for
+                  your business. Sign up in minutes to get a full website hosted
+                  under your own domain.{' '}
+                </div>
+                <div className={styles.header__content__body__line}>
+                  Building a great product is hard. Having a great blog doesn’t
+                  have to be.{' '}
+                </div>
+              </div>
+              <a
+                className={`${styles.header__button}`}
+                href="https://app.blogwise.co"
+              >
+                Get Started
+              </a>
+            </div>
           </div>
           <div className={styles.midSection}>
             <div className={styles.midSection__text}>

@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$primaryFont: Roboto, sans-serif;
+$whiteFontColor: #FFFFFF
+$blueTheme: #67b4f9;
+$yellowTheme: #FFD833;
+
+$bodyFontSize: calc(16px + .5vw)
+
 html
   margin: 0
   padding: 0
   overflow-x: hidden
 body
+  overflow-x: hidden
   min-height: 100vh
   position: relative
   margin: 0
@@ -19,11 +29,14 @@ body
   text-transform: uppercase
 
 .yellowButton
+  border: none;
   text-decoration: none
   padding: 12px 45px
   font-size: 16px
   border-radius: 40px
   font-weight: 600
-  background: #FFD833
+  background: $yellowTheme
   color: black
   text-transform: uppercase
+  max-width: 150px
+  text-align: center

@@ -1,12 +1,27 @@
+///////////////////////
+// Index Page Styles //
+///////////////////////
+
 @import global
+$largeBreak: 'max-width: 1200px'
+$mobileBreak: 'max-width: 900px'
+$midBreak: 'max-width: 800px'
+$smallMidBreak: 'max-width: 750px'
+$smallBreak: 'max-width: 350px'
   
 .index
   overflow-x: hidden
 
-////////////////////////////////
-// Index Page Landing Section //
-////////////////////////////////
+////////////////////
+// Header Section //
+////////////////////
+
 .header
+  margin-bottom: 24px
+  @media ($mobileBreak)
+      background: $blueTheme
+
+.header__swoosh
   z-index: -1
   top: 0
   right: 0
@@ -22,47 +37,69 @@
     top: 200px
     height: 400px
     width: 417px
-  @media (max-width: 820px)
-    height: 300px
-    width: 312px
-  @media (max-width: 900px)
+  @media ($mobileBreak)
     visibility: hidden
+
 .header__content
-  padding-left: 6%
-  padding-bottom: 150px
-  font-family: Nunito
-  @media (max-width: 900px)
-    margin-top: -20px
-    padding-top: 20px
-    background: #67b4f9
-    color: white
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin-left: 6%
+  font-family: $primaryFont
+  @media ($mobileBreak)
+    color: $whiteFontColor
     display: flex
     flex-direction: column
     align-items: center
-    padding-left: 0
-  h1
-    font-size: 50px
-    margin-bottom: -45px
-    @media (max-width: 800px)
-      align-self: flex-start
-      padding-left: 20px
-      font-size: 30px
-      margin-bottom: -15px
-    @media (max-width: 600px)
-      font-size: 24px
-      margin-bottom: -10px
-  p
-    width: 400px
-    font-weight: 600
-    font-size: 18px
-    @media (max-width: 600px)
-      width: 90%
+    margin-left: 0
+
+.header__content__title
+  font-size: calc(18px + 3vw)
+  margin-bottom: 24px
+  @media ($midBreak)
+    magin-top: 12px
+    margin-bottom: 0
+  @media ($mobileBreak)
+    width: 80%
+    text-align: center
+    font-size: calc(22px + 3vw)
+  @media ($smallBreak)
+    font-size: calc(18px + 3vw)
+    width: 70%
+
+.header__content__title__line
+  margin-bottom: 12px
+  @media ($smallMidBreak)
+    margin-bottom: 24px
+
+.header__content__body
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 400px
+  font-size: calc(18px + 0.5vw)
+  @media ($mobileBreak) 
+    text-align: center
+    width: 70%
+  @media ($smallBreak)
+    width: 75%  // Adjusted to not have hanging word on new line
+
+.header__content__body__line
+  margin-bottom: 24px
+  @media ($midBreak)
+    margin-bottom: 12px
+
+.header__button
+  @extend .yellowButton
+  margin-top: 24px
+  margin-bottom: 24px
+  @media ($largeBreak)
+    margin-top: 12px
+
 .header__mobile
-  height: 0px
   display: none !important
-  @media (max-width: 900px)
+  @media ($mobileBreak)
     display: inline-block !important
-    margin-top: -20px
     margin-bottom: 20px
 
 ////////////////////
@@ -99,7 +136,7 @@
   width: 300px
   padding-left: 825px
   margin-bottom: -250px
-  font-family: Nunito
+  font-family: $primaryFont
   text-align: right
   @media (max-width: 1150px)
     margin-bottom: 0
@@ -111,7 +148,7 @@
     font-size: 28px
 .midSection__caption
   padding-top: 10px
-  font-family: Nunito
+  font-family: $primaryFont
   font-weight: 600
   font-size: 17px
   width: 500px
@@ -144,7 +181,7 @@
   @media (max-width: 600px)
     margin: 50px 5% 0px
   h1
-    font-family: Nunito
+    font-family: $primaryFont
     font-weight: 300
     color: #67B4F9
     margin-bottom: 50px
@@ -164,7 +201,7 @@
   align-items: center
   justify-content: flex-start
   text-align: center
-  font-family: Nunito
+  font-family: $primaryFont
   color: white
   @media (max-width: 600px)
     margin-top: 30px

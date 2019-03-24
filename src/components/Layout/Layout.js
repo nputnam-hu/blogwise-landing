@@ -80,6 +80,7 @@ const TemplateWrapper = ({ children }) => (
             href="/img/favicon.ico"
             sizes="16x16"
           />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#fff" />
           <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
