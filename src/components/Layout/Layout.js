@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import Intercom from 'react-intercom'
 
 import Navbar from '../Navbar'
 import Footer from '../Footer'
@@ -90,6 +91,7 @@ const TemplateWrapper = ({ children }) => (
         </Helmet>
         <Navbar logoFixed={data.navbarLogo.childImageSharp.fixed} />
         <div>{children}</div>
+        <Intercom appID="bnz5sax3" />
         <Footer
           logoFixed={data.footerLogo.childImageSharp.fixed}
           linkedinFixed={data.linkedin.childImageSharp.fixed}
