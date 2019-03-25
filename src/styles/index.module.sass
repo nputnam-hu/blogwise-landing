@@ -8,7 +8,6 @@
   overflow-x: hidden
   font-family: $primaryFont
 
-  
 ////////////////////
 // Header Section //
 ////////////////////
@@ -16,27 +15,35 @@
 .header
   height: 950px
   width: auto
+
   @media (max-width: 1600px)
     height: 900px
     width: auto
+
   @media (max-width: 1500px)
     height: 850px
     width: auto
+
   @media (max-width: 1400px)
     height: 800px
     width: auto
+
   @media (max-width: 1300px)
     height: 750px
     width: auto
+
   @media (max-width: 1200px)
     height: 700px
     width: auto
-  @media (max-width:1100px)
+
+  @media (max-width: 1100px)
     height: 650px
     width: auto
+
   @media (max-width: 1000px)
     height: 510px
     width: auto
+
   @media ($mobileBreak)
     height: auto
     background: $blueTheme
@@ -47,27 +54,35 @@
   right: 0
   height: 950px
   width: 990px
+
   @media (max-width: 1600px)
     height: 900px
     width: 940px
+
   @media (max-width: 1500px)
     height: 850px
     width: 890px
+
   @media (max-width: 1400px)
     height: 800px
     width: 834px
+
   @media (max-width: 1300px)
     height: 750px
     width: 780px
+
   @media (max-width: 1200px)
     height: 700px
     width: 724px
+
   @media (max-width: 1100px)
     height: 650px
     width: 673px
+
   @media (max-width: 1000px)
     height: 510px
     width: 527px
+
   @media ($mobileBreak)
     display: none
 
@@ -78,6 +93,7 @@
   flex-direction: column
   justify-content: space-between
   font-family: $primaryFont
+
   @media ($mobileBreak)
     margin-top: 0
     margin-left: 0
@@ -89,26 +105,32 @@
 
 .header__content__title
   @extend .headerFont
+
   margin-bottom: 24px
   font-weight: bold
+
   @media ($midBreak)
     magin-top: 12px
     margin-bottom: 0
+
   @media ($mobileBreak)
     width: 80%
     font-size: calc(22px + 3vw)
     text-align: center
+
   @media ($smallBreak)
     font-size: calc(18px + 3vw)
     width: 70%
 
 .header__content__title__line
   margin-bottom: 12px
+
   @media ($smallMidBreak)
     margin-bottom: 24px
 
 .header__content__body
   @extend .bodyFont
+
   margin-top: 5%
   margin-bottom: 5%
   width: 375px
@@ -119,46 +141,53 @@
   @media (max-width: 1200px)
     margin-top: 0px
     margin-bottom: 12px
-  @media ($mobileBreak) 
+
+  @media ($mobileBreak)
     width: 80%
     text-align: center
+
   @media ($smallMidBreak)
     width: 315px
+
   @media ($smallBreak)
-    width: 95%  // Adjusted to not have hanging word on new line
+    width: 95%
 
 .header__content__body__line
   margin-bottom: 7%
+
   @media ($mobileBreak)
     margin-bottom: 12px
 
 .header__button
   @extend .yellowButton
+
   margin-top: 24px
   margin-bottom: 24px
+
   @media ($largeBreak)
     margin-top: 0px
 
 .header__mobileImage
   // It's unclear why this wont work w/o impt
-  display: none !important 
+  display: none !important
+
   @media ($mobileBreak)
     display: inline-block !important
     margin-bottom: 20px
 
-
 ////////////////////
 // Middle Section //
 ////////////////////
-  
+
 .midSection
   margin-top: 0px
   margin-left: 5%
   height: 325px
   display: flex
   flex-direction: row-reverse
-  align-items: top 
+  align-items: top
   justify-content: flex-end
+
   @media ($mobileBreak)
     margin-top: 24px
     margin-left: 0px
@@ -169,6 +198,7 @@
 .midSection__screenshot1
   width: 800px
   height: 440px
+
   @media ($mobileBreak)
     height: auto
     width: auto
@@ -183,6 +213,7 @@
   box-shadow: 3px 3px 4px 1px $shadowColor
   margin-top: 155px
   left: -70%
+
   @media ($mobileBreak)
     display: none
 
@@ -191,8 +222,10 @@
   margin-left: 10%
   width: 250px
   text-align: right
+
   @media (max-width: 1200px)
     margin-left: 0px
+
   @media ($mobileBreak)
     margin-right: 0px
     width: 70%
@@ -206,16 +239,19 @@
   font-family: $primaryFont
   font-size: calc(18px + .5vw)
   font-weight: bold
+
   @media ($mobileBreak)
     font-size: calc(18px + 3vw)
     line-height: 1em
     width: 100%
+
   @media (max-width: 440px)
     width: 296px
 
 .midSection__text__body
   font-size: 16px
   font-style: italic
+
   @media ($mobileBreak)
     font-size: calc(16px + 0.5vw)
     line-height: 1em
@@ -226,40 +262,49 @@
     width: 90%
     font-family: $primaryFont
     font-style: italic
+
   @media (max-width: 560px)
     width: 195px
 
 .midSection__caption
   font-family: $primaryFont
   font-size: calc(18px + 0.2vw)
-  font-style: bold 
+  font-style: bold
   color: white
   width: 45%
   margin-top: 128px
   margin-left: 5%
+
   @media (max-width: 1000px)
     width: 35%
+
   @media ($mobileBreak)
     display: none
 
 .midSection__mobileCaption
-  @extend .captionFont 
+  @extend .captionFont
+
   display: none
+
   @media ($mobileBreak)
     display: inline
     margin-bottom: 24px
     color: white
     width: 65%
     margin-left: -198px
+
   @media (max-width: 780px)
     margin-left: -164px
+
   @media (max-width: 700px)
     width: 90%
     margin-left: 0px
+
   @media (max-width: 480px)
     width: 80%
     align-self: flex-start
     margin-left: 20px
+
   @media (max-width: 336px)
     align-self: flex-start
     width: 75%
@@ -271,37 +316,44 @@
   margin-top: -300px
   margin-left: -64px
   z-index: -1
+
   @media ($mobileBreak)
     height: 500px
     width: 760px
     margin-top: -475px
+
   @media (max-width: 750px)
     margin-top: -480px
+
   @media (max-width: 600px)
     margin-top: -430px
     height: 450px
     width: 655px
+
   @media (max-width: 550px)
     margin-top: -430px
     height: 450px
     width: 625px
+
   @media (max-width: 500px)
     margin-top: -390px
     height: 400px
     width: 555px
+
   @media (max-width: 450px)
     margin-top: -350px
     height: 375px
     width: 500px
+
   @media (max-width: 400px)
     margin-top: -340px
     height: 350px
     width: 475px
+
   @media ($smallBreak)
     margin-top: -249px
     height: 250px
     width: 379px
-
 
 /////////////////////////
 // PostGeniius Section //
@@ -316,7 +368,7 @@
   align-items: center
   justify-content: center
   width: 90%
-  
+
   @media ($mobileBreak)
     margin-top: 64px
     margin-left: auto
@@ -339,17 +391,18 @@
     align-items: center
     flex-direction: column
 
-
 .postSection__features__image
   display: inline
   width: 50%
   max-width: 600px
   margin-bottom: 28px
+
   @media ($mobileBreak)
     display: none
 
 .postSection__features__featuresList
   width: 45%
+
   @media ($mobileBreak)
     width: 80%
 
@@ -361,6 +414,7 @@
   font-weight: bold
   color: $greyTheme
   text-transform: uppercase
+
   @media ($mobileBreak)
     margin-left: 0px
     margin-bottom: 16px
@@ -372,14 +426,16 @@
 
 .card
   margin-bottom: 15%
+
   @media ($mobileBreak)
     margin-bottom: 5%
 
 .card___title
   margin-bottom: 12px
   font-size: calc(16px + 0.5vw)
-  line-height: 1em  
+  line-height: 1em
   font-weight: bold
+
   @media ($mobileBreak)
     margin-bottom: 12px
 
@@ -390,9 +446,9 @@
 
 .stagger
   margin-left: 8%
+
   @media ($mobileBreak)
     margin-left: 0px
-
 
 //////////////////////////
 // Why blogwise Section //
@@ -403,6 +459,7 @@
   display: flex
   flex-direction: column
   align-items: center
+
   @media (max-width: 600px)
     margin: 25px 5% 0px
 
@@ -413,5 +470,3 @@
   text-transform: uppercase
   font-weight: bold
   color: $blueTheme
-
-
