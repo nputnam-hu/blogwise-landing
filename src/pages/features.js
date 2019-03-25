@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
+import PostGenius from '../components/PostGenius'
 
 import dots from '../images/dots.svg'
 import styles from '../styles/features.module.sass'
@@ -59,18 +60,21 @@ const Features = ({ data }) => (
           Start your blog, lightning fast –
         </div>
         <Img
-          fluid={data.sectiononeHeader.childImageSharp.fluid}
+          fluid={data.headerPhoto.childImageSharp.fluid}
           className={styles.header__photo}
         />
         <div className={styles.header__text2}>
           – then make content like a pro
         </div>
       </div>
+      <a className={styles.header__link} href="https://app.blogwise.co">
+        Get Started &#10230;
+      </a>
       {/* How It Works Section */}
       <div className={styles.howItWorksSection}>
-        <h2 className={styles.howItWorksSection__header}>
+        <div className={styles.howItWorksSection__header}>
           Here&rsquo;s how it works
-        </h2>
+        </div>
         <div className={styles.howItWorksSection__howCards}>
           <HowCard
             stepNumber="1"
@@ -94,24 +98,7 @@ const Features = ({ data }) => (
         </div>
       </div>
       <div className={styles.postGenius}>
-        <div className={styles.postSection__title}>
-          <Img
-            fluid={data.postGenius.childImageSharp.fluid}
-            alt="postgenius icon"
-            className={styles.postSection__title__image}
-          />
-          <div className={styles.postSection__title__text}>
-            <div className={styles.postSection__title__text__line1}>
-              Not sure what to write about?
-            </div>
-            <div className={styles.postSection__title__text__line2}>
-              Consult the <span className={styles.accentText}>PostGenius</span>
-            </div>
-            <div className={styles.postSection__title__text__line3}>
-              PostGenius gives you the tools you need to make content fast
-            </div>
-          </div>
-        </div>
+        <PostGenius />
         <div className={styles.postSection__featureList}>
           <div className={styles.featureCard}>
             <Img
@@ -151,7 +138,7 @@ const Features = ({ data }) => (
           </div>
           <div className={styles.featureCard}>
             <Img
-              fluid={data.twitter.childImageSharp.fluid}
+              fluid={data.headlines.childImageSharp.fluid}
               alt="headline generator"
               className={styles.featureCard__image}
             />{' '}
@@ -217,7 +204,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    sectiononeHeader: file(relativePath: { eq: "megaphone.png" }) {
+    headerPhoto: file(relativePath: { eq: "megaphone.png" }) {
       childImageSharp {
         fluid(maxHeight: 450) {
           ...GatsbyImageSharpFluid

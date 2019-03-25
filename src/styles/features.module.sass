@@ -1,6 +1,6 @@
-///////////////////
-// Features Page //
-///////////////////
+///////////////////////////////////////////////////////////////////////////////
+// Features Page //////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 @import global
 
@@ -14,31 +14,60 @@
 
 .header
   display: flex
-  flex-direction: column
+  flex-direction: row
   align-items: center
-  justify-content: space-around
+  justify-content: center
   margin-bottom: 24px
   font-family: $primaryFont
   font-size: calc(22px + .5vw)
   font-weight: bold
+  @media ($mobileBreak)
+    flex-direction: column
 
 .header__text1
-  width: 60%
-  margin-left: -25%
+  max-width: 300px
+  width: 30%
+  margin-bottom: 128px
+  @media ($mobileBreak)
+    width: 60%
+    margin-left: -25%
+    margin-bottom: 0px
+    max-width: 250px
 
 .header__photo
   margin-top: 24px
   margin-bottom: 24px
-  width: 200px
+  width: 20%
+  @media ($mobileBreak)
+    width: 200px
 
 .header__text2
-  width: 55%
-  margin-left: 35%
+  max-width: 300px
+  width: 30%
+  margin-top: 96px
+  text-align: right
+  @media ($mobileBreak)
+    margin-left: 35%
+    width: 55%
+    margin-top: 0px
+    max-width: 250px
+  @media (max-width: 370px)
+    width: 200px
+
+.header__link
+  @extend .accentText
+  text-decoration: None
+  font-weight: bold
+  font-size: calc(18px + .5vw)
+  margin-left: 67%
+  @media ($mobileBreak)
+    display: none
 
 
 ////////////////////////
 // Individual HowCard //
 ////////////////////////
+
 .howCard
   display: flex
   flex-direction: column
@@ -47,6 +76,7 @@
   @media (max-width: 1120px)
     margin-bottom: 50px
     flex-direction: row
+
 .howCard__top
   display: flex
   flex-direction: row
@@ -54,6 +84,7 @@
     flex-direction: column
   @media (max-width: 600px)
     margin-left: -100px
+
 .howCard__stepcounter
   margin-left: 24px !important
   color: #d6d6d6
@@ -63,6 +94,7 @@
     margin-right: 20px
     margin-left: 0px
     text-align: right
+
 .howCard__dots
   position: absolute
   margin-left: 50px
@@ -74,6 +106,7 @@
     margin-right: -145px
     height: 25px
     transform: rotate(270deg)
+
 .howCard__bottom
   width: 350px
   height: 400px
@@ -94,6 +127,7 @@
     font-size: 15px
     @media (max-width: 600px)
       font-size: 14px
+
 .howCard__img
   margin-top: auto
   margin-bottom: auto
@@ -106,19 +140,24 @@
 //////////////////////////
 
 .howItWorksSection
-  padding: 0px 12% 36px
+  margin-top: 48px
+  margin-left: auto
+  margin-right: auto
   display: flex
   flex-direction: column
   align-items: center
+  font-family: $primaryFont
 
 .howItWorksSection__header
   font-size: 28px
-  margin-bottom: 50px
+  font-weight: bold
+  margin-bottom: 5%
 
 .howItWorksSection__howCards
   display: flex
   flex-direction: row
   @media (max-width: 1120px)
+    margin-left: -15%
     flex-direction: column
 
 
@@ -127,68 +166,11 @@
 ////////////////////////
 
 .postGenius
+  margin-top: 5%
   display: flex
   flex-direction: column
   align-items: center
-
-.postSection__title
-  display: flex
-  flex-direction: row
-  text-align: center
-  align-items: center
-  justify-content: space-around
-  margin-bottom: 36px
-  width: 90%
-
-  @media ($mobileBreak)
-    display: flex
-    flex-direction: column-reverse
-    align-items: center
-    justify-content: center
-    font-family: $primaryFont
-    text-align: center
-    margin-bottom: 24px
-
-.postSection__title__image
-  margin-left: 10%
-  width: 20%
-  @media ($mobileBreak)
-    margin-left: 0px
-    width: 50%
-
-.postSection__title__text
-  width: 75%
-
-  @media ($mobileBreak)
-    width: 100%
-    margin-bottom: 18px
-  
-.postSection__title__text__line1
-  font-size: calc(22px + 1.5vw)
-  line-height: 1.5em
-  font-weight: bold
-  @media ($mobileBreak)
-    font-size: 17px
-    line-height: 1.5em
-    font-weight: bold
-
-.postSection__title__text__line2
-  font-size: calc(24px + 1.5vw)
-  line-height: 1em
-  font-weight: bold
-  margin-bottom: 6px
-  @media ($mobileBreak)
-    font-size: 28px
-    line-height: 1em
-    font-weight: bold
-    margin-bottom: 6px
-
-.postSection__title__text__line3
-  font-size: calc(16px + 0.2vw)
-  line-height: 1em
-  @media ($mobileBreak)
-    font-size: 18px
-    line-height: 1em
+  font-family: $primaryFont
     
 .postSection__featureList
   display: flex
@@ -204,11 +186,13 @@
   transition: box-shadow 0.3s ease-in-out
   margin-bottom: 12px
 
+
   @media ($mobileBreak)
     flex-direction: column
     width: 80%
 
 .featureCard__image
+  margin: 7%
   width: 90%
   max-width: 400px
   margin-top: 12px
@@ -217,18 +201,24 @@
 .featureCard__text
   text-align: left
   font-family: $primaryFont
-  margin-bottom: 12px
-  width: 50%
+  margin: 7%
+  width: 70%
   @media ($mobileBreak)
     text-align: center
 
 .featureCard__text__title
-  font-size: 18px
-  margin-bottom: 6px
+  margin-bottom: 12px
+  font-size: calc(16px + 0.5vw)
+  line-height: 1em  
+  font-weight: bold
+  @media ($mobileBreak)
+    margin-bottom: 12px
 
 .featureCard__text__body
-  font-size: 14px
-
+  font-size: calc(14px + 0.15vw)
+  line-height: 1em
+  margin-bottom: 12px
+  
 ////////////////////////
 // Individual Feature //
 ////////////////////////
