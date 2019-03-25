@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import Layout from '../components/Layout'
+import MarketingBanner from '../components/MarketingBanner'
 import PostGenius from '../components/PostGenius'
 import WhyCardGrid from '../components/WhyCardGrid'
 
@@ -141,7 +142,7 @@ class Index extends Component {
                     </div>
                     <div className={styles.card__description}>
                       Having trouble of thinking of a catchy title or topic?
-                      We've got you covered with an automated headline
+                      We&apos;ve got you covered with an automated headline
                       generator.
                     </div>
                   </div>
@@ -161,21 +162,11 @@ class Index extends Component {
           </div>
           {/* Why Section */}
           <div className={styles.whySection}>
-            <h1>WHY BLOGWISE?</h1>
+            <div className={styles.whySection__title}>Why Blogwise?</div>
             <WhyCardGrid />
           </div>
           {/* Future Section */}
-          <div className={styles.futureSection}>
-            <h1>Content Marketing is the Future</h1>
-            <h2>Are you ready to blogwise?</h2>
-            <br />
-            <a
-              className={`${styles.header__button}`}
-              href="https://app.blogwise.co"
-            >
-              Get Started
-            </a>
-          </div>
+          <MarketingBanner />
         </div>
       </Layout>
     )

@@ -361,8 +361,6 @@
   font-weight: bold
   color: $greyTheme
   text-transform: uppercase
-
-
   @media ($mobileBreak)
     margin-left: 0px
     margin-bottom: 16px
@@ -376,7 +374,6 @@
   margin-bottom: 15%
   @media ($mobileBreak)
     margin-bottom: 5%
-
 
 .card___title
   margin-bottom: 12px
@@ -402,45 +399,22 @@
 //////////////////////////
 
 .whySection
-  margin: 125px 10% 0px
+  margin: 48px 10% 0px
   display: flex
   flex-direction: column
   align-items: center
   @media (max-width: 600px)
-    margin: 50px 5% 0px
+    margin: 25px 5% 0px
 
 .whySection__title
-  font-family: $primaryFont
-  font-size: 36px
-  text-transform: uppercase
-  font-weight: 300
-  color: #67B4F9
   margin-bottom: 50px
+  font-family: $primaryFont
+  font-size: calc(22px + 0.5vw)
+  text-transform: uppercase
+  font-weight: bold
+  color: $blueTheme
   
 ////////////////////
 // Future Section //
 ////////////////////
 
-.futureSection
-  margin-top: 125px
-  padding: 0px 5%
-  height: 385px
-  background-size: cover
-  background-repeat: no-repeat
-  background-image: url('/img/index-blueBackground.png')
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: flex-start
-  text-align: center
-  font-family: $primaryFont
-  color: white
-  @media (max-width: 600px)
-    margin-top: 30px
-    padding-bottom: 60px
-  h1
-    margin-top: 64px
-    margin-bottom: -5px
-    font-size: 40px
-  h2
-    font-weight: 300
