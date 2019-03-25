@@ -4,12 +4,6 @@
 
 @import global
 
-$largeBreak: 'max-width: 1200px'
-$mobileBreak: 'max-width: 900px'
-$midBreak: 'max-width: 800px'
-$smallMidBreak: 'max-width: 750px'
-$smallBreak: 'max-width: 350px'
-  
 .index
   overflow-x: hidden
 
@@ -438,6 +432,7 @@ $smallBreak: 'max-width: 350px'
 //////////////////////////
 // Why blogwise Section //
 //////////////////////////
+
 .whySection
   margin: 125px 10% 0px
   display: flex
@@ -445,19 +440,23 @@ $smallBreak: 'max-width: 350px'
   align-items: center
   @media (max-width: 600px)
     margin: 50px 5% 0px
-  h1
-    font-family: $primaryFont
-    font-weight: 300
-    color: #67B4F9
-    margin-bottom: 50px
+
+.whySection__title
+  font-family: $primaryFont
+  font-size: 36px
+  text-transform: uppercase
+  font-weight: 300
+  color: #67B4F9
+  margin-bottom: 50px
   
 ////////////////////
 // Future Section //
 ////////////////////
+
 .futureSection
   margin-top: 125px
   padding: 0px 5%
-  height: 445px
+  height: 385px
   background-size: cover
   background-repeat: no-repeat
   background-image: url('/img/index-blueBackground.png')
@@ -472,19 +471,8 @@ $smallBreak: 'max-width: 350px'
     margin-top: 30px
     padding-bottom: 60px
   h1
-    padding-top: 70px
+    margin-top: 64px
     margin-bottom: -5px
     font-size: 40px
   h2
     font-weight: 300
-.futureSection__form
-  display: flex
-  flex-direction: column
-  width: 300px
-  input
-    padding: 10px
-    font-size: 16px
-    border-radius: 10px
-    border: none
-  button
-    margin-top: 20px

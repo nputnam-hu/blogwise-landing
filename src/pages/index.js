@@ -181,30 +181,15 @@ class Index extends Component {
           </div>
           {/* Future Section */}
           <div className={styles.futureSection}>
-            <h1 className="scrollTo">Content Marketing is the Future</h1>
+            <h1>Content Marketing is the Future</h1>
             <h2>Are you ready to blogwise?</h2>
             <br />
-            {/* <Link className="yellow-button" to="/features">
-          Explore Features
-        </Link> */}
-            <form
-              onSubmit={this.handleSubmit}
-              className={styles.futureSection__form}
+            <a
+              className={`${styles.header__button}`}
+              href="https://app.blogwise.co"
             >
-              {' '}
-              <input
-                type="email"
-                onChange={this.handleChange}
-                placeholder="your email"
-                name="email"
-                value={this.state.email}
-              />
-              <button type="submit" className={styles.yellowButton}>
-                {this.state.emailSubmitted
-                  ? 'Subscribed!'
-                  : 'Join the Waitlist Now'}
-              </button>
-            </form>
+              Get Started
+            </a>
           </div>
         </div>
       </Layout>
