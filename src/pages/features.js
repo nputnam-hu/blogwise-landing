@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
+import PostGenius from '../components/PostGenius'
 
 import dots from '../images/dots.svg'
 import styles from '../styles/features.module.sass'
@@ -53,35 +54,27 @@ const scrollToFeature = () => {
 const Features = ({ data }) => (
   <Layout>
     <div className={styles.features}>
-      <Img
-        fluid={data.sectiononeHeader.childImageSharp.fluid}
-        style={{ position: 'absolute' }}
-        className={styles.header__photo}
-      />
+      {/* Header Section */}
       <div className={styles.header}>
-        <h1>The lightning fast way to start content marketing</h1>
-        <p>
-          <b>
-            Businesses that run blogs get 67% more leads per month than
-            businesses who don&rsquo;t
-          </b>
-          *. blogwise makes it easy to set up your blog and create content to
-          drive engagement and build your brand.
-        </p>
-        <div
-          className={styles.yellowButton}
-          onClick={scrollToFeature}
-          onKeyDown={scrollToFeature}
-          role="button"
-          tabIndex="0"
-        >
-          Explore Features
+        <div className={styles.header__text1}>
+          Start your blog, lightning fast –
+        </div>
+        <Img
+          fluid={data.headerPhoto.childImageSharp.fluid}
+          className={styles.header__photo}
+        />
+        <div className={styles.header__text2}>
+          – then make content like a pro
         </div>
       </div>
+      <a className={styles.header__link} href="https://app.blogwise.co">
+        Get Started &#10230;
+      </a>
+      {/* How It Works Section */}
       <div className={styles.howItWorksSection}>
-        <h2 className={styles.howItWorksSection__header}>
+        <div className={styles.howItWorksSection__header}>
           Here&rsquo;s how it works
-        </h2>
+        </div>
         <div className={styles.howItWorksSection__howCards}>
           <HowCard
             stepNumber="1"
@@ -104,32 +97,76 @@ const Features = ({ data }) => (
           />
         </div>
       </div>
-      <div className={styles.featuresSection}>
-        <h2 className={styles.featuresSection__title}>Features</h2>
-        <FeatureSection
-          title="Feature name"
-          description="blogwise is built with the latest web technology to be up to twice as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
-          imgFluid={data.feature1.childImageSharp.fluid}
-        />
-        <div style={{ height: 100 }} />
-        <FeatureSection
-          title="Feature name"
-          description="blogwise is built with the latest web technology to be up to twice as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
-          imgFluid={data.feature1.childImageSharp.fluid}
-          reversed
-        />
-      </div>
-      <div className={styles.companiesSection}>
-        <h1>Companies that use blogwise</h1>
-        <div className={styles.companiesSection__imgs}>
-          {data.companies.edges.map(({ node }) => (
+      <div className={styles.postGenius}>
+        <PostGenius />
+        <div className={styles.postSection__featureList}>
+          <div className={styles.featureCard}>
             <Img
-              fixed={node.childImageSharp.fixed}
-              alt={node.name}
-              className={styles.companiesSection__img}
-            />
-          ))}
+              fluid={data.twitter.childImageSharp.fluid}
+              alt="twitter integration"
+              className={styles.featureCard__image}
+            />{' '}
+            <div className={styles.featureCard__text}>
+              <div className={styles.featureCard__text__title}>
+                Twitter Integration
+              </div>
+              <div className={styles.featureCard__text__body}>
+                blogwise is built with the latest web technology to be up to 2x
+                as fast as Wordpress. Faster page load times means less customer
+                churn and higher engagement. Don’t get bogged down with legacy
+                software: use the best and latest.
+              </div>
+            </div>
+          </div>
+          <div className={styles.featureCard}>
+            <Img
+              fluid={data.calendar.childImageSharp.fluid}
+              alt="editorial calendar"
+              className={styles.featureCard__image}
+            />{' '}
+            <div className={styles.featureCard__text}>
+              <div className={styles.featureCard__text__title}>
+                Editorial Calendar
+              </div>
+              <div className={styles.featureCard__text__body}>
+                blogwise is built with the latest web technology to be up to 2x
+                as fast as Wordpress. Faster page load times means less customer
+                churn and higher engagement. Don’t get bogged down with legacy
+                software: use the best and latest.
+              </div>
+            </div>
+          </div>
+          <div className={styles.featureCard}>
+            <Img
+              fluid={data.headlines.childImageSharp.fluid}
+              alt="headline generator"
+              className={styles.featureCard__image}
+            />{' '}
+            <div className={styles.featureCard__text}>
+              <div className={styles.featureCard__text__title}>
+                Headline Generator
+              </div>
+              <div className={styles.featureCard__text__body}>
+                blogwise is built with the latest web technology to be up to 2x
+                as fast as Wordpress. Faster page load times means less customer
+                churn and higher engagement. Don’t get bogged down with legacy
+                software: use the best and latest.
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      {/* Future Section */}
+      <div className={styles.futureSection}>
+        <h1>Content Marketing is the Future</h1>
+        <h2>Are you ready to blogwise?</h2>
+        <br />
+        <a
+          className={`${styles.header__button}`}
+          href="https://app.blogwise.co"
+        >
+          Get Started
+        </a>
       </div>
     </div>
   </Layout>
@@ -139,20 +176,42 @@ export default Features
 
 export const pageQuery = graphql`
   query FeaturesQuery {
-    sectiononeHeader: file(relativePath: { eq: "megaphone.png" }) {
-      childImageSharp {
-        fluid(maxHeight: 450) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    feature1: file(relativePath: { eq: "megaphone.png" }) {
+    postGenius: file(relativePath: { eq: "postGenius.png" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
+    twitter: file(relativePath: { eq: "twitter-integration.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    calendar: file(relativePath: { eq: "calendar.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    headlines: file(relativePath: { eq: "headline-generator.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    headerPhoto: file(relativePath: { eq: "megaphone.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 450) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
     cloud: file(relativePath: { eq: "cloud.png" }) {
       childImageSharp {
         fluid(maxWidth: 225) {
@@ -171,18 +230,6 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 225) {
           ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    companies: allFile(filter: { relativePath: { regex: "/companies/" } }) {
-      edges {
-        node {
-          name
-          childImageSharp {
-            fixed(height: 100) {
-              ...GatsbyImageSharpFixed
-            }
-          }
         }
       }
     }

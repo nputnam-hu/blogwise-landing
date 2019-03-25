@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+
 import styles from './Footer.module.sass'
 
 const Footer = ({ logoFixed, twitterFixed, linkedinFixed, facebookFixed }) => (

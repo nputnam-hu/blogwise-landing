@@ -1,13 +1,66 @@
-html
-  margin: 0
-  padding: 0
-  overflow-x: hidden
-body
-  min-height: 100vh
-  position: relative
-  margin: 0
-  padding-bottom: 8rem
-  font-family: Nunito
+///////////////////////////////////////////////////////////////////////////////
+// global.sass ////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////
+// Import Statements //
+// ////////////////////
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://use.typekit.net/enl0hyf.css");
+
+
+/////////////////////
+// Theme Variables //
+/////////////////////
+
+$primaryFont: europa, sans-serif;
+$whiteFontColor: #FFFFFF
+$blueTheme: #67b4f9;
+$skyBlueTheme: #d3f0ff;
+$yellowTheme: #FFD833;
+$greyTheme: #A9A9A9
+$shadowColor: #E9E9E9
+$shadowHover: #888888
+
+
+/////////////////
+// Breakpoints //
+/////////////////
+  
+$largeBreak: 'max-width: 1200px'
+$mobileBreak: 'max-width: 900px'
+$midBreak: 'max-width: 800px'
+$smallMidBreak: 'max-width: 750px'
+$smallBreak: 'max-width: 350px'
+
+$minScreen: 320px;
+$maxScreen: 1440px;
+
+
+////////////////////
+// Global Classes //
+////////////////////
+
+.headerFont
+  font-family: $primaryFont
+  font-size: calc(18px + 2vw)
+  line-height: 1em
+
+.bodyFont
+  font-family: $primaryFont
+  font-size: calc(16px + 0.3vw)
+  line-height: 1em
+
+.captionFont
+  font-family: $primaryFont
+  font-size: calc(16px + 0.5vw)
+  line-height: 1em
+  font-style: italic
+
+.accentText
+  display: inline
+  color: #ff7400
 
 .yellow-button
   text-decoration: none
@@ -19,11 +72,66 @@ body
   text-transform: uppercase
 
 .yellowButton
+  border: none;
   text-decoration: none
   padding: 12px 45px
   font-size: 16px
   border-radius: 40px
   font-weight: 600
-  background: #FFD833
+  background: $yellowTheme
   color: black
   text-transform: uppercase
+  max-width: 150px
+  text-align: center
+
+
+////////////////////////////////////////
+// Default Settings for html and body //
+////////////////////////////////////////
+
+html
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+body
+  overflow-x: hidden
+  min-height: 100vh
+  position: relative
+  margin: 0
+  padding-bottom: 8rem
+  font-family: $primaryFont
+
+
+/////////////////////////////////////////
+// Settings for Different Font Effects //
+/////////////////////////////////////////
+
+// Europa-Bold Bold
+// font-family: europa, sans-serif;
+// font-weight: 700;
+// font-style: normal;
+
+// Europa-Light Light
+// font-family: europa, sans-serif;
+// font-weight: 300;
+// font-style: normal;
+
+// Europa-Regular Regular
+// font-family: europa, sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// Europa-Light LightItalic
+// font-family: europa, sans-serif;
+// font-weight: 300;
+// font-style: italic;
+
+// Europa-Regular RegularItalic
+// font-family: europa, sans-serif;
+// font-weight: 400;
+// font-style: italic;
+
+// Europa-Bold BoldItalic
+// font-family: europa, sans-serif;
+// font-weight: 700;
+// font-style: italic;

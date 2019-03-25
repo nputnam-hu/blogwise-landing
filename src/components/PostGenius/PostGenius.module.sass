@@ -1,0 +1,64 @@
+@import ../../styles/global
+    
+.postSection__title
+  margin-bottom: 36px
+  width: 90%
+  display: flex
+  flex-direction: row
+  text-align: center
+  align-items: center
+  justify-content: center
+  @media ($mobileBreak)
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    justify-content: center
+    font-family: $primaryFont
+    text-align: center
+    margin-bottom: 12px
+
+.postSection__title__image
+  max-width: 225px
+  margin-left: 10%
+  width: 17%
+  @media ($mobileBreak)
+    margin-top: 16px
+    margin-left: 0px
+    margin-bottom: 16px
+    width: 40%
+
+.postSection__title__text
+  width: 75%
+
+  @media ($mobileBreak)
+    width: 100%
+    margin-bottom: 18px
+  
+
+.postSection__title__text__line1
+  font-size: calc(20px + .8vw)
+  line-height: 1.5em
+  font-weight: bold
+  @media ($mobileBreak)
+    font-size: 17px
+    line-height: 1.5em
+    font-weight: bold
+    margin-bottom: 18px
+
+.postSection__title__text__line2
+  font-size: calc(24px + .8vw)
+  line-height: 1em
+  font-weight: bold
+  margin-bottom: 6px
+  @media ($mobileBreak)
+    font-size: 28px
+    line-height: 1em
+    font-weight: bold
+    margin-bottom: 18px
+
+.postSection__title__text__line3
+  font-size: calc(16px + 0.2vw)
+  line-height: 1em
+  @media ($mobileBreak)
+    font-size: 18px
+    line-height: 1em

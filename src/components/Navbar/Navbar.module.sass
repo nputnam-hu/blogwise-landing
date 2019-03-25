@@ -1,3 +1,5 @@
+@import ../../styles/global
+  
 .navbar
   padding: 20px 25px
   display: flex
@@ -13,16 +15,17 @@
       display: none
 
 .navbar__link
+  font-family: $primaryFont
+  font-weight: bold
   margin-right: 50px
   text-transform: lowercase
+  text-decoration: none
+  color: $greyTheme
   @media (max-width: 900px)
       margin-right: 50px
       text-transform: lowercase
       font-size: 18px
       font-weight: 600
-      text-decoration: none
-      color: black
-      font-family: Nunito
 
 .buttonBlue
   text-decoration: none

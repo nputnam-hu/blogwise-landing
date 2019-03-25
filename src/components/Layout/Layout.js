@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import Intercom from 'react-intercom'
 
 import Navbar from '../Navbar'
 import Footer from '../Footer'
@@ -80,6 +81,7 @@ const TemplateWrapper = ({ children }) => (
             href="/img/favicon.ico"
             sizes="16x16"
           />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#fff" />
           <meta property="og:type" content="business.business" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
@@ -89,6 +91,7 @@ const TemplateWrapper = ({ children }) => (
         </Helmet>
         <Navbar logoFixed={data.navbarLogo.childImageSharp.fixed} />
         <div>{children}</div>
+        <Intercom appID="bnz5sax3" />
         <Footer
           logoFixed={data.footerLogo.childImageSharp.fixed}
           linkedinFixed={data.linkedin.childImageSharp.fixed}

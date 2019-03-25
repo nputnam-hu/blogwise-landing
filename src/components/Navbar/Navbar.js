@@ -6,15 +6,15 @@ import styles from './Navbar.module.sass'
 
 const Navbar = ({ logoFixed }) => (
   <>
-    {/* <div className={styles.mobile}>
+    <div className={styles.mobile}>
       <HamburgerMenu />
-    </div> */}
+    </div>
     <div className={styles.navbar}>
       <Link to="/">
         <Img fixed={logoFixed} alt="Blogwise" />
       </Link>
       <nav>
-        {/* <Link className={styles.navbar__link} to="/features">
+        <Link className={styles.navbar__link} to="/features">
           Features
         </Link>
         <Link className={styles.navbar__link} to="/why-blogwise">
@@ -30,15 +30,12 @@ const Navbar = ({ logoFixed }) => (
           rel="noopener noreferrer"
         >
           Blog
-        </a> */}
-        {/* <a className={styles.buttonBlue} href="https://app.blogwise.co/register">
-          Sign Up
-        </a> */}
+        </a>
         <a
           className={styles.buttonBlue}
-          href="mailto:support@blogwise.co?subject=Blogwise Beta Inquiry"
+          href="https://app.blogwise.co/register"
         >
-          Apply For Beta
+          Sign Up
         </a>
       </nav>
     </div>

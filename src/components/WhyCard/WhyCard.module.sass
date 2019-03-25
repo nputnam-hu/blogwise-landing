@@ -1,7 +1,9 @@
+@import ../../styles/global
+
 .whyCard
+  height: 250px
   width: 475px
   padding: 30px 70px 50px
-  height: 250px
   display: flex
   flex-direction: row
   justify-content: space-between
@@ -10,26 +12,29 @@
   transition: box-shadow 0.3s ease-in-out
   @media (max-width: 600px)
     flex-direction: column
+    align-items: center
     justify-content: center
     width: 80%
     padding: 10px 10% 10px
-    height: 520px
+    height: 450px
+
 .whyCard__icon
   margin-bottom: 20px
   height: 20px
+
 .whyCard__text
   width: 275px
   display: flex
   flex-direction: column
-  font-family: Nunito
+  font-family: $primaryFont
   @media (max-width: 600px)
     width: 95%
-  h2
-    text-align: center
-    text-transform: lowercase
-    font-size: 34px
-    margin-bottom: -1px
-    padding-bottom: 15px
+
+.whyCard__text__title
+  text-align: center
+  text-transform: lowercase
+  font-size: calc(22px + .5vw)
+  font-weight: bold
 
 .whyCard:hover
   box-shadow: 6px 6px 8px 2px #888888
