@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { stack as Menu } from 'react-burger-menu'
 
+import styles from '../../Navbar.module.sass'
+
 class Hamburger extends Component {
   state = {
     hamburgerDisplay: false,
@@ -52,7 +54,10 @@ class Hamburger extends Component {
         height: '26px',
         width: '26px',
       },
-      bmMenu: { background: 'rgba(255, 255, 255, 0)' },
+      bmMenu: {
+        background: 'rgba(255, 255, 255, 0)',
+        overflow: 'hidden',
+      },
       bmMorphShape: { fill: '#373a47' },
       bmItemList: {
         textAlign: 'right',
@@ -63,7 +68,6 @@ class Hamburger extends Component {
         background: 'rgba(255, 255, 255, 0.96)',
         marginTop: '-50px',
         height: '120vh',
-        overflowY: 'hidden !important',
       },
     }
 
@@ -87,28 +91,28 @@ class Hamburger extends Component {
             <br />
             <Link
               onClick={() => this.setState({ hamburgerDisplay: true })}
-              className="navbar-link-mobile"
+              className={styles.navbar__linkMobile}
               to="/"
             >
               Home
             </Link>
             <Link
               onClick={() => this.setState({ hamburgerDisplay: true })}
-              className="navbar-link-mobile"
+              className={styles.navbar__linkMobile}
               to="/features"
             >
               Features
             </Link>
             <Link
               onClick={() => this.setState({ hamburgerDisplay: true })}
-              className="navbar-link-mobile"
+              className={styles.navbar__linkMobile}
               to="/why-blogwise"
             >
               Why Blogwise
             </Link>
             <Link
               onClick={() => this.setState({ hamburgerDisplay: true })}
-              className="navbar-link-mobile"
+              className={styles.navbar__linkMobile}
               to="/pricing"
             >
               Pricing
@@ -118,11 +122,14 @@ class Hamburger extends Component {
               href="https://blog.blogwise.co"
               target="_blank"
               rel="noopener noreferrer"
-              className="navbar-link-mobile"
+              className={styles.navbar__linkMobile}
             >
               Blog
             </a>
-            <a href="https://app.blogwise.co" className="navbar-link-mobile">
+            <a
+              href="https://app.blogwise.co/register"
+              className={styles.navbar__linkMobile}
+            >
               Sign Up
             </a>
           </Menu>

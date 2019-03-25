@@ -72,7 +72,10 @@ const Pricing = ({ data }) => (
         <div className={styles.getStartedSection__message}>
           Start with a free blog and upgrade later
         </div>
-        <a href="https://app.blogwise.co" className={styles.yellowButton}>
+        <a
+          href="https://app.blogwise.co/register"
+          className={styles.yellowButton}
+        >
           Get Started
         </a>
       </div>

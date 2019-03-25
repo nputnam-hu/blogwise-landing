@@ -67,7 +67,10 @@ const Features = ({ data }) => (
           – then make content like a pro
         </div>
       </div>
-      <a className={styles.header__link} href="https://app.blogwise.co">
+      <a
+        className={styles.header__link}
+        href="https://app.blogwise.co/register"
+      >
         Get Started &#10230;
       </a>
       {/* How It Works Section */}
@@ -163,7 +166,7 @@ const Features = ({ data }) => (
         <br />
         <a
           className={`${styles.header__button}`}
-          href="https://app.blogwise.co"
+          href="https://app.blogwise.co/register"
         >
           Get Started
         </a>

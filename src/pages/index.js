@@ -70,7 +70,7 @@ class Index extends Component {
               </div>
               <a
                 className={`${styles.header__button}`}
-                href="https://app.blogwise.co"
+                href="https://app.blogwise.co/register"
               >
                 Get Started
               </a>

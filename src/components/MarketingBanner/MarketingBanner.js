@@ -7,7 +7,10 @@ const MarketingBanner = () => (
     <h1>Content Marketing is the Future</h1>
     <h2>Are you ready to blogwise?</h2>
     <br />
-    <a className={`${styles.header__button}`} href="https://app.blogwise.co">
+    <a
+      className={`${styles.header__button}`}
+      href="https://app.blogwise.co/register"
+    >
       Get Started
     </a>
   </div>
