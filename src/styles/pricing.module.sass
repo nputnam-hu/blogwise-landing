@@ -1,21 +1,28 @@
+///////////////////////////////////////////////////////////////////////////////
+// Pricing Page ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+  
 @import global
 
-//////////////////
-// Pricing Page //
-//////////////////
 .pricing
-  padding: 20px 10% 200px
+  padding: 20px 10% 175px
   display: flex
   flex-direction: column
   align-items: center
-  h1
-    font-weight: 300
+
+.pricing__title
+    font-weight: bold
     padding-bottom: 40px
+    font-size: 32px
+
 .pricingCards
   display: flex
   flex-direction: row
-  @media (max-width: 1250px)
-    flex-direction: column
+  flex-wrap: wrap
+  justify-content: center
+  align-content: space-between
+  @media (max-width: 1690px)
+    width: 75%
 
 
 ///////////////////////
@@ -31,9 +38,11 @@
   right: 0px
   z-index: -1
 
+
 //////////////////////////////
 // Individual Pricing Cards //
 //////////////////////////////
+
 .pricingCard
   z-index: 10
   width: 300px
@@ -41,8 +50,8 @@
   flex-direction: column
   box-shadow: 4px 4px 5px 3px #E9E9E9
   margin-right: 15px
-  @media (max-width: 1250px)
-    margin-bottom: 30px  
+  margin-left: 15px
+  margin-bottom: 30px  
 
 .pricingCard__top
   padding: 2px
@@ -52,6 +61,8 @@
   h2
     font-size: 20px
     font-weight: 300
+    font-weight: bold
+
 .pricingCard__bottom
   background: white
   padding: 20px 10% 60px
@@ -60,21 +71,27 @@
   align-items: center
   h1
     font-size: 40px
+    font-weight: bold
+
 .pricingCard__permonth
   margin-top: -20px
   font-size: 13px
   margin-bottom: 30px
+  
 .pricingCard__list
   align-self: flex-start
   list-style: none
   margin-left: 0
   padding-left: 1em
   margin-bottom: 50px
+  font-style: italic
+  font-weight: 300
   li
     margin-bottom: 15px
     img
       margin-bottom: -6px
       margin-right: 15px
+
 .pricingCard__description
   text-align: center
   font-weight: 600
@@ -89,6 +106,8 @@
   flex-direction: column
   align-items: center
   h1
-    margin-bottom: -15px
+    margin-bottom: 32px
   span
     margin-bottom: 50px
+  @media ($mobileBreak)
+    text-align: center

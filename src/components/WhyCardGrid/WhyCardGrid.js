@@ -41,26 +41,22 @@ const WhyCardGrid = () => (
     `}
     render={data => (
       <>
-        <div className={styles.whyCardRow}>
+        <div className={styles.whyCardGrid}>
           <WhyCard
             iconFixed={data.ligtning.childImageSharp.fixed}
             title="Blazingly Fast"
             description="blogwise is built with the latest web technology to be up to 2x as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
           />
-          <div style={{ width: '50px', height: '50px' }} />
           <WhyCard
             iconFixed={data.search.childImageSharp.fixed}
             title="search optimized"
             description="blogwise is built with the latest web technology to be up to twice as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
           />
-        </div>
-        <div className={styles.whyCardRow}>
           <WhyCard
             iconFixed={data.design.childImageSharp.fixed}
             title="elegant design"
             description="blogwise blogs feature a clean, sharp UI that gets out of the way and lets your content do the talking. Each blog is designed mobile-first, so you can reach customers across all different platforms."
           />
-          <div style={{ width: '50px', height: '50px' }} />
           <WhyCard
             iconFixed={data.pointer.childImageSharp.fixed}
             title="easy to manage"

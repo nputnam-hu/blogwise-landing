@@ -62,10 +62,10 @@ const Pricing = ({ data }) => (
       className={styles.rightSwoosh}
     />
     <div className={styles.pricing}>
-      <h1>Pricing Options</h1>
+      <div className={styles.pricing__title}>Pricing Options</div>
       <div className={styles.pricingCards}>
         <PricingCard
-          bgColor="rgba(204, 204, 204, 0.42)"
+          bgColor="rgba(204, 204, 204)"
           name="Free"
           price="0"
           users="1"
@@ -74,7 +74,7 @@ const Pricing = ({ data }) => (
           description="for a blog that will do the trick"
         />
         <PricingCard
-          bgColor="rgba(103, 180, 249, 0.26)"
+          bgColor="rgba(103, 180, 249)"
           name="Starter"
           price="9"
           users="2"

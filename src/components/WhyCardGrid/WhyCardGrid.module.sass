@@ -1,7 +1,17 @@
-.whyCardRow
+// .whyCardRow
+//   display: flex
+//   flex-direction: row
+//   justify-content: space-between
+//   margin-bottom: 50px
+//   @media (max-width: 1150px)
+//     flex-direction: column
+@import ../../styles/global
+
+.whyCardGrid
   display: flex
   flex-direction: row
-  justify-content: space-between
-  margin-bottom: 50px
-  @media (max-width: 1150px)
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: center
+  @media ($mobileBreak)
     flex-direction: column
