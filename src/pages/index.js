@@ -109,6 +109,7 @@ class Index extends Component {
             Our templates autopopulate your information - <br /> so you never
             have to struggle with broken customization tools.{' '}
           </div>
+          {/* PostGenius Section */}
           <div className={styles.postSection}>
             <div className={styles.postSection__title}>
               <Img

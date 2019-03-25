@@ -1,7 +1,40 @@
+///////////////////
+// Features Page //
+///////////////////
+
 @import global
 
 .features
-  padding-bottom: 100px
+  margin-top: 36px
+
+
+////////////////////
+// Header Section //
+////////////////////
+
+.header
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+  margin-bottom: 24px
+  font-family: $primaryFont
+  font-size: calc(22px + .5vw)
+  font-weight: bold
+
+.header__text1
+  width: 60%
+  margin-left: -25%
+
+.header__photo
+  margin-top: 24px
+  margin-bottom: 24px
+  width: 200px
+
+.header__text2
+  width: 55%
+  margin-left: 35%
+
 
 ////////////////////////
 // Individual HowCard //
@@ -68,10 +101,138 @@
   @media (max-width: 600px)
     width: 175px
 
+//////////////////////////
+// How It Works Section //
+//////////////////////////
+
+.howItWorksSection
+  padding: 0px 12% 36px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.howItWorksSection__header
+  font-size: 28px
+  margin-bottom: 50px
+
+.howItWorksSection__howCards
+  display: flex
+  flex-direction: row
+  @media (max-width: 1120px)
+    flex-direction: column
+
+
+////////////////////////
+// PostGenius Section //
+////////////////////////
+
+.postGenius
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.postSection__title
+  display: flex
+  flex-direction: row
+  text-align: center
+  align-items: center
+  justify-content: space-around
+  margin-bottom: 36px
+  width: 90%
+
+  @media ($mobileBreak)
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    justify-content: center
+    font-family: $primaryFont
+    text-align: center
+    margin-bottom: 24px
+
+.postSection__title__image
+  margin-left: 10%
+  width: 20%
+  @media ($mobileBreak)
+    margin-left: 0px
+    width: 50%
+
+.postSection__title__text
+  width: 75%
+
+  @media ($mobileBreak)
+    width: 100%
+    margin-bottom: 18px
+  
+.postSection__title__text__line1
+  font-size: calc(22px + 1.5vw)
+  line-height: 1.5em
+  font-weight: bold
+  @media ($mobileBreak)
+    font-size: 17px
+    line-height: 1.5em
+    font-weight: bold
+
+.postSection__title__text__line2
+  font-size: calc(24px + 1.5vw)
+  line-height: 1em
+  font-weight: bold
+  margin-bottom: 6px
+  @media ($mobileBreak)
+    font-size: 28px
+    line-height: 1em
+    font-weight: bold
+    margin-bottom: 6px
+
+.postSection__title__text__line3
+  font-size: calc(16px + 0.2vw)
+  line-height: 1em
+  @media ($mobileBreak)
+    font-size: 18px
+    line-height: 1em
+    
+.postSection__featureList
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.featureCard
+  display: flex
+  flex-direction: row
+  width: 70%
+  align-items: center
+  box-shadow: 3px 3px 4px 1px #E9E9E9
+  transition: box-shadow 0.3s ease-in-out
+  margin-bottom: 12px
+
+  @media ($mobileBreak)
+    flex-direction: column
+    width: 80%
+
+.featureCard__image
+  width: 90%
+  max-width: 400px
+  margin-top: 12px
+  margin-bottom: 6px
+
+.featureCard__text
+  text-align: left
+  font-family: $primaryFont
+  margin-bottom: 12px
+  width: 50%
+  @media ($mobileBreak)
+    text-align: center
+
+.featureCard__text__title
+  font-size: 18px
+  margin-bottom: 6px
+
+.featureCard__text__body
+  font-size: 14px
 
 ////////////////////////
 // Individual Feature //
 ////////////////////////
+
 .feature
   display: flex
   width: 100%
@@ -107,68 +268,6 @@
   p
     font-size: 18px
 
-////////////////////
-// Header Section //
-////////////////////
-
-.header
-  padding: 40px 12% 200px
-  height: 400px
-  width: 500px
-  display: flex
-  flex-direction: column
-  justify-content: center
-  @media (max-width: 1200px)
-    padding: 40px 5% 200px
-  @media (max-width: 600px)
-    padding-bottom: 100px
-    width: 90%
-  h1
-    font-family: Nunito
-    font-size: 40px
-    padding-bottom: 10px
-  p
-    width: 400px
-    font-size: 18px
-    margin-top: -1px
-    @media (max-width: 600px)
-      width: 90%
-
-.header__photo
-  top: 150px
-  right: 10%
-  height: 450px
-  width: 470px
-  @media (max-width: 1100px)
-    right: 20px
-  @media (max-width: 1000px)
-    display: none !important
-
-.yellowButton
-  @extend .yellowButton
-  margin-top: 30px
-  width: 157px
-
-
-//////////////////////////
-// How It Works Section //
-//////////////////////////
-
-.howItWorksSection
-  padding: 0px 12% 100px
-  display: flex
-  flex-direction: column
-  align-items: center
-
-.howItWorksSection__header
-  font-size: 28px
-  margin-bottom: 50px
-
-.howItWorksSection__howCards
-  display: flex
-  flex-direction: row
-  @media (max-width: 1120px)
-    flex-direction: column
 
 
 //////////////////////
@@ -191,30 +290,39 @@
   margin-bottom: 100px
 
 
-///////////////////////
-// Companies Section //
-///////////////////////
+////////////////////
+// Future Section //
+////////////////////
 
-.companiesSection
-  padding: 70px 10% 100px
+.futureSection
+  margin-top: 64px
+  padding: 0px 5%
+  height: 385px
+  background-size: cover
+  background-repeat: no-repeat
+  background-image: url('/img/index-blueBackground.png')
   display: flex
   flex-direction: column
   align-items: center
+  justify-content: flex-start
   text-align: center
-  h1
-    font-weight: 300
-    margin-bottom: 80px
+  font-family: $primaryFont
+  color: white
+  @media (max-width: 600px)
+    margin-top: 30px
+    padding-bottom: 60px
+    margin-top: 125px
 
-.companiesSection__imgs
-  display: flex
-  flex-direction: row
-  justify-content: space-around
-  align-items: center
-  flex-wrap: wrap
-  width: 80%
-  @media (max-width: 800px)
-    flex-direction: column
-    justify-content: flex-start
-    
-.companiesSection__img
-  margin-bottom: 40px
+  h1
+    margin-top: 64px
+    margin-bottom: -5px
+    font-size: 40px
+  h2
+    font-weight: 300
+
+.header__button
+  @extend .yellowButton
+  margin-top: 24px
+  margin-bottom: 24px
+  @media ($largeBreak)
+    margin-top: 0px
