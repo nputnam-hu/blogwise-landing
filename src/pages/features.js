@@ -114,10 +114,10 @@ const Features = ({ data }) => (
                 Twitter Integration
               </div>
               <div className={styles.featureCard__text__body}>
-                blogwise is built with the latest web technology to be up to 2x
-                as fast as Wordpress. Faster page load times means less customer
-                churn and higher engagement. Don’t get bogged down with legacy
-                software: use the best and latest.
+                When writing relevant content, it&apos;s important to know
+                what&apos;s going on with your audience. Stay in the know
+                without leaving blogwise. We&apos;ll automatically pull tweets
+                that we think are relevant to you.
               </div>
             </div>
           </div>
@@ -132,10 +132,10 @@ const Features = ({ data }) => (
                 Editorial Calendar
               </div>
               <div className={styles.featureCard__text__body}>
-                blogwise is built with the latest web technology to be up to 2x
-                as fast as Wordpress. Faster page load times means less customer
-                churn and higher engagement. Don’t get bogged down with legacy
-                software: use the best and latest.
+                Starting a blog isn&apos;t the hardest part -- maintaining it.
+                Our Editorial Calendar lets you schedule and assign posts,
+                making planning a breeze whether you&apos;re just adding a
+                couple posts or launching a full a content campaign.
               </div>
             </div>
           </div>
@@ -150,10 +150,9 @@ const Features = ({ data }) => (
                 Headline Generator
               </div>
               <div className={styles.featureCard__text__body}>
-                blogwise is built with the latest web technology to be up to 2x
-                as fast as Wordpress. Faster page load times means less customer
-                churn and higher engagement. Don’t get bogged down with legacy
-                software: use the best and latest.
+                Facing a bit of writer&apos; block? Having trouble of thinking
+                of a catchy title or topic? We&apos;ve got you covered with an
+                automated headline generator.
               </div>
             </div>
           </div>

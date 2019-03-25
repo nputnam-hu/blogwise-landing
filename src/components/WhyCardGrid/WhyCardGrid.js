@@ -50,7 +50,7 @@ const WhyCardGrid = () => (
           <WhyCard
             iconFixed={data.search.childImageSharp.fixed}
             title="search optimized"
-            description="blogwise is built with the latest web technology to be up to twice as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
+            description="When you're busy building your own business, you don't have time to be worrying about the technical details of your blog. We use automated tools to give your site the benefis of SEO, all under the hood."
           />
           <WhyCard
             iconFixed={data.design.childImageSharp.fixed}
