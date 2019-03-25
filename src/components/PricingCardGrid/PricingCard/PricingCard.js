@@ -1,0 +1,60 @@
+import React from 'react'
+
+import styles from './PricingCard.module.sass'
+import lightning from './small-lightning.png'
+
+const PricingCard = ({
+  bgColor,
+  title,
+  price,
+  userNum,
+  pageViews,
+  branding,
+  description,
+}) => (
+  <div className={styles.pricingCard}>
+    <div className={styles.pricingCard__top} style={{ background: bgColor }}>
+      <div className={styles.pricingCard__top__title}>{title}</div>
+    </div>
+    <div className={styles.pricingCard__body}>
+      <div className={styles.pricingCard__body__price}>${price}</div>
+      <div className={styles.pricingCard__body__perMonth}>
+        per month, billed monthly
+      </div>
+      <div className={styles.pricingCard__body__list}>
+        <div className={styles.listItem}>
+          <img
+            src={lightning}
+            className={styles.listItem__image}
+            alt="Bullet Point"
+          />
+          <div className={styles.listItem__text}>
+            {userNum} Staff User
+            {(parseInt(userNum, 10) > 1 || userNum === 'Unlimited') && 's'}
+          </div>
+        </div>
+        <div className={styles.listItem}>
+          <img
+            src={lightning}
+            className={styles.listItem__image}
+            alt="Bullet Point"
+          />
+          <div className={styles.listItem__text}>{pageViews} page views/mo</div>
+        </div>
+        <div className={styles.listItem}>
+          <img
+            src={lightning}
+            className={styles.listItem__image}
+            alt="Bullet Point"
+          />
+          <div className={styles.listItem__text}>
+            {branding ? 'blogwise branding' : 'ad free'}
+          </div>
+        </div>
+      </div>
+      <span className={styles.pricingCard__description}>{description}</span>
+    </div>
+  </div>
+)
+
+export default PricingCard
