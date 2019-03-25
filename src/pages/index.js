@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import Layout from '../components/Layout'
+import PostGenius from '../components/PostGenius'
 import WhyCardGrid from '../components/WhyCardGrid'
 
 import styles from '../styles/index.module.sass'
@@ -112,25 +113,7 @@ class Index extends Component {
           </div>
           {/* PostGenius Section */}
           <div className={styles.postSection}>
-            <div className={styles.postSection__title}>
-              <Img
-                fluid={data.postGenius.childImageSharp.fluid}
-                alt="postgenius icon"
-                className={styles.postSection__title__image}
-              />
-              <div className={styles.postSection__title__text}>
-                <div className={styles.postSection__title__text__line1}>
-                  Not sure what to write about?
-                </div>
-                <div className={styles.postSection__title__text__line2}>
-                  Consult the{' '}
-                  <span className={styles.accentText}>PostGenius</span>
-                </div>
-                <div className={styles.postSection__title__text__line3}>
-                  PostGenius gives you the tools you need to make content fast
-                </div>
-              </div>
-            </div>
+            <PostGenius />
             <div className={styles.postSection__features}>
               <Img
                 fluid={data.cycle.childImageSharp.fluid}
@@ -147,9 +130,9 @@ class Index extends Component {
                       Twitter Integration
                     </div>
                     <div className={styles.card__description}>
-                      Stay in the know without even having to leave blogwise.
-                      We'll automatically pull tweets that we think are relevant
-                      to you.
+                      Stay in the know without leaving blogwise. We'll
+                      automatically pull tweets that we think are relevant to
+                      you.
                     </div>
                   </div>
                   <div className={`${styles.card} ${styles.stagger}`}>
