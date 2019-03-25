@@ -1,6 +1,6 @@
-///////////////////////
-// Index Page Styles //
-///////////////////////
+///////////////////////////////////////////////////////////////////////////////
+// index.module.sass //////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 @import global
 
@@ -13,83 +13,90 @@
 ////////////////////
 
 .header
-  margin-bottom: 24px
-  height: 850px
+  height: 950px
   width: auto
   @media (max-width: 1600px)
-    height: 800px
+    height: 900px
     width: auto
   @media (max-width: 1500px)
-    height: 750px
+    height: 850px
     width: auto
   @media (max-width: 1400px)
-    height: 700px
+    height: 800px
     width: auto
   @media (max-width: 1300px)
-    height: 650px
+    height: 750px
     width: auto
   @media (max-width: 1200px)
-    height: 466px
+    height: 700px
     width: auto
   @media (max-width:1100px)
-    height: auto
+    height: 650px
     width: auto
-
+  @media (max-width: 1000px)
+    height: 510px
+    width: auto
   @media ($mobileBreak)
-      background: $blueTheme
+    height: auto
+    background: $blueTheme
 
-.header__swoosh
-  top: 98px
+.header__image
+  z-index: -1
+  top: 0px
   right: 0
-  height: 850px
-  width: 880px
+  height: 950px
+  width: 990px
   @media (max-width: 1600px)
-    height: 800px
-    width: 830px
+    height: 900px
+    width: 940px
   @media (max-width: 1500px)
+    height: 850px
+    width: 890px
+  @media (max-width: 1400px)
+    height: 800px
+    width: 834px
+  @media (max-width: 1300px)
     height: 750px
     width: 780px
-  @media (max-width: 1400px)
-    height: 700px
-    width: 730px
-  @media (max-width: 1300px)
-    height: 650px
-    width: 680px
   @media (max-width: 1200px)
-    height: 466px
-    width: 485px
+    height: 700px
+    width: 724px
   @media (max-width: 1100px)
-    height: 400px
-    width: 415px
+    height: 650px
+    width: 673px
   @media (max-width: 1000px)
-    height: 388px
-    width: 403px
+    height: 510px
+    width: 527px
   @media ($mobileBreak)
     display: none
 
 .header__content
+  margin-top: 24px
+  margin-left: 6%
   display: flex
   flex-direction: column
   justify-content: space-between
-  margin-left: 6%
   font-family: $primaryFont
   @media ($mobileBreak)
-    color: $whiteFontColor
+    margin-top: 0
+    margin-left: 0
     display: flex
     flex-direction: column
     align-items: center
-    margin-left: 0
+    background: $blueTheme
+    color: $whiteFontColor
 
 .header__content__title
   @extend .headerFont
   margin-bottom: 24px
+  font-weight: bold
   @media ($midBreak)
     magin-top: 12px
     margin-bottom: 0
   @media ($mobileBreak)
     width: 80%
-    text-align: center
     font-size: calc(22px + 3vw)
+    text-align: center
   @media ($smallBreak)
     font-size: calc(18px + 3vw)
     width: 70%
@@ -101,24 +108,27 @@
 
 .header__content__body
   @extend .bodyFont
+  margin-top: 5%
+  margin-bottom: 5%
+  width: 375px
   display: flex
   flex-direction: column
   justify-content: space-between
-  margin-top: 72px
-  margin-bottom: 72px
-  width: 400px
+
   @media (max-width: 1200px)
     margin-top: 0px
     margin-bottom: 12px
   @media ($mobileBreak) 
+    width: 80%
     text-align: center
-    width: 70%
+  @media ($smallMidBreak)
+    width: 315px
   @media ($smallBreak)
-    width: 75%  // Adjusted to not have hanging word on new line
+    width: 95%  // Adjusted to not have hanging word on new line
 
 .header__content__body__line
-  margin-bottom: 24px
-  @media ($midBreak)
+  margin-bottom: 7%
+  @media ($mobileBreak)
     margin-bottom: 12px
 
 .header__button
@@ -128,8 +138,9 @@
   @media ($largeBreak)
     margin-top: 0px
 
-.header__mobile
-  display: none !important
+.header__mobileImage
+  // It's unclear why this wont work w/o impt
+  display: none !important 
   @media ($mobileBreak)
     display: inline-block !important
     margin-bottom: 20px

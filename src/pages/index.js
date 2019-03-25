@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
@@ -38,7 +38,7 @@ class Index extends Component {
               fluid={data.upperSwoosh.childImageSharp.fluid}
               style={{ position: 'absolute' }}
               alt="woman with megaphone"
-              className={styles.header__swoosh}
+              className={styles.header__image}
             />
             <div className={styles.header__content}>
               <div className={styles.header__content__title}>
@@ -52,17 +52,18 @@ class Index extends Component {
               <Img
                 fixed={data.mobile.childImageSharp.fixed}
                 alt="cloud of blogs"
-                className={styles.header__mobile}
+                className={styles.header__mobileImage}
               />
               <div className={styles.header__content__body}>
                 <div className={styles.header__content__body__line}>
                   blogwise is the easiest way to start content marketing for
-                  your business. Sign up in minutes to get a full website hosted
-                  under your own domain.{' '}
+                  your business. <br />
+                  Sign up in minutes to get a full website hosted under your own
+                  domain.{' '}
                 </div>
                 <div className={styles.header__content__body__line}>
-                  Building a great product is hard. Having a great blog doesn’t
-                  have to be.{' '}
+                  Building a great product is hard. <br />
+                  Having a great blog doesn’t have to be.{' '}
                 </div>
               </div>
               <a
