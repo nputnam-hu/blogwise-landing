@@ -31,8 +31,11 @@ const Navbar = ({ logoFixed }) => (
         >
           Blog
         </a>
+        <a className={styles.loginButton} href="https://app.blogwise.co/login">
+          Login
+        </a>
         <a
-          className={styles.buttonBlue}
+          className={styles.signUpButton}
           href="https://app.blogwise.co/register"
         >
           Sign Up

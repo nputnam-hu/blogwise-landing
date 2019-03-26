@@ -13,7 +13,7 @@
   nav
     padding-right: 20px
 
-    @media (max-width: 900px)
+    @media (max-width: 1160px)
       display: none
 
 .navbar__link
@@ -26,8 +26,6 @@
   font-size: 22px
 
   @media (max-width: 900px)
-    margin-right: 50px
-    text-transform: lowercase
     font-size: 18px
     font-weight: 600
 
@@ -40,7 +38,19 @@
   margin-top: 20px
   color: #333
 
-.buttonBlue
+.loginButton
+  margin-right: 32px
+  padding: 10px 33px
+  border: 4px solid $blueTheme
+  border-radius: 30px
+  text-decoration: none
+  font-size: 16px
+  font-weight: bold
+  color: #333
+  text-transform: uppercase
+  letter-spacing: 1.6px
+
+.signUpButton
   margin-left: 10px
   padding: 13px 35px
   border-radius: 30px
@@ -58,7 +68,7 @@
 .mobile
   display: none !important
 
-  @media (max-width: 900px)
+  @media (max-width: 1160px)
     display: inline !important
     font-size: 22px
 
