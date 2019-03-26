@@ -132,10 +132,10 @@ const Features = ({ data }) => (
                 Editorial Calendar
               </div>
               <div className={styles.featureCard__text__body}>
-                Starting a blog isn&apos;t the hardest part -- maintaining it.
-                Our Editorial Calendar lets you schedule and assign posts,
-                making planning a breeze whether you&apos;re just adding a
-                couple posts or launching a full a content campaign.
+                Starting a blog isn&apos;t the hardest part -- it&apos;s
+                maintaining it. Our Editorial Calendar lets you schedule and
+                assign posts, making planning a breeze whether you&apos;re just
+                adding a couple posts or launching a full a content campaign.
               </div>
             </div>
           </div>
