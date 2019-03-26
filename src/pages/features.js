@@ -150,7 +150,7 @@ const Features = ({ data }) => (
                 Headline Generator
               </div>
               <div className={styles.featureCard__text__body}>
-                Facing a bit of writer&apos; block? Having trouble of thinking
+                Facing a bit of writer&apos;s block? Having trouble of thinking
                 of a catchy title or topic? We&apos;ve got you covered with an
                 automated headline generator.
               </div>
