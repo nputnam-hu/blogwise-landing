@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import WhyCard from '../WhyCard'
+import WhyCard from './WhyCard'
 
 import styles from './WhyCardGrid.module.sass'
 
@@ -42,11 +42,13 @@ const WhyCardGrid = () => (
     render={data => (
       <>
         <div className={styles.whyCardGrid}>
-          <WhyCard
-            iconFixed={data.ligtning.childImageSharp.fixed}
-            title="Blazingly Fast"
-            description="blogwise is built with the latest web technology to be up to 2x as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
-          />
+          <div className={styles.whyCardGrid__whyCard}>
+            <WhyCard
+              iconFixed={data.ligtning.childImageSharp.fixed}
+              title="Blazingly Fast"
+              description="blogwise is built with the latest web technology to be up to 2x as fast as Wordpress. Faster page load times means less customer churn and higher engagement. Don’t get bogged down with legacy software: use the best and latest."
+            />
+          </div>
           <WhyCard
             iconFixed={data.search.childImageSharp.fixed}
             title="search optimized"
