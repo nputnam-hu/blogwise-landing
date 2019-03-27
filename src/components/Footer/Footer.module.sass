@@ -1,4 +1,7 @@
+@import ../../styles/global
+
 .footer
+  font-family: $primaryFont
   background: #F4F4F4
   padding-bottom: 20px
   position: absolute
@@ -9,6 +12,7 @@
   display: flex
   flex-direction: column
   overflow-x: hidden
+
   @media (max-width: 425px)
     width: auto
 
@@ -16,6 +20,7 @@
   display: flex
   flex-direction: row
   justify-content: space-between
+
   @media (max-width: 800px)
     flex-direction: column-reverse
 
@@ -27,8 +32,10 @@
   font-family: Nunito
   font-size: 13px
   color: #6D6D6D
+
   span
     margin-right: 60px
+
   a
     text-decoration: none
     color: #6D6D6D
@@ -40,5 +47,6 @@
   flex-direction: row
   align-self: flex-end
   margin-right: 70px
+
   a
     padding-right: 15px

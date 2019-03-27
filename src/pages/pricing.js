@@ -5,48 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import PricingCardGrid from '../components/PricingCardGrid'
 
-import lightning from '../images/small-lightning.png'
 import styles from '../styles/pricing.module.sass'
-
-const PricingCard = ({
-  bgColor,
-  name,
-  price,
-  users,
-  pageviews,
-  branding,
-  description,
-}) => (
-  <div className={styles.pricingCard}>
-    <div className={styles.pricingCard__top} style={{ background: bgColor }}>
-      <h2>{name}</h2>
-    </div>
-    <div className={styles.pricingCard__bottom}>
-      <h1>${price}</h1>
-      <span className={styles.pricingCard__permonth}>
-        per month, billed monthly
-      </span>
-      <ul className={styles.pricingCard__list}>
-        <li>
-          <img src={lightning} alt="Bullet Point" />
-          <span>
-            {users} Staff User
-            {(parseInt(users, 10) > 1 || users === 'Unlimited') && 's'}
-          </span>
-        </li>
-        <li>
-          <img src={lightning} alt="Bullet Point" />
-          <span>{pageviews} page views/mo</span>
-        </li>
-        <li>
-          <img src={lightning} alt="Bullet Point" />
-          <span>{branding ? 'blogwise branding' : 'ad free'}</span>
-        </li>
-      </ul>
-      <span className={styles.pricingCard__description}>{description}</span>
-    </div>
-  </div>
-)
 
 const Pricing = ({ data }) => (
   <Layout>
