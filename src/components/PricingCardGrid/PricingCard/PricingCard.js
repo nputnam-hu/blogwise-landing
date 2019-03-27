@@ -11,6 +11,7 @@ const PricingCard = ({
   pageViews,
   branding,
   description,
+  freeTrial = false,
 }) => (
   <div className={styles.pricingCard}>
     <div className={styles.pricingCard__top} style={{ background: bgColor }}>
@@ -53,6 +54,16 @@ const PricingCard = ({
         </div>
       </div>
       <span className={styles.pricingCard__description}>{description}</span>
+      {freeTrial && (
+        <>
+          <div style={{ height: '5px' }} />
+          <b>
+            <span className={styles.pricingCard__description}>
+              Start your 14 day free trial today
+            </span>
+          </b>
+        </>
+      )}
     </div>
   </div>
 )

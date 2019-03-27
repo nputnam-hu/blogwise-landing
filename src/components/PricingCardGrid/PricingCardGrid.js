@@ -22,6 +22,7 @@ const PricingCardGrid = () => (
       userNum="2"
       pageViews="10k"
       description="for small businesses"
+      freeTrial
     />
     <PricingCard
       bgColor="rgba(103, 180, 249, 0.4)"

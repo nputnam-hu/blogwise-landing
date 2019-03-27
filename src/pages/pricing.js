@@ -29,7 +29,7 @@ const Pricing = ({ data }) => (
           Not sure what plan is best for you?
         </div>
         <div className={styles.getStartedSection__message}>
-          Start with a free blog and upgrade later
+          Start your 14 day free trial with the starter plan today
         </div>
         <a
           href="https://app.blogwise.co/register"
