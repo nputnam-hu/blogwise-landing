@@ -91,7 +91,6 @@ const TemplateWrapper = ({ children }) => (
         </Helmet>
         <Navbar logoFixed={data.navbarLogo.childImageSharp.fixed} />
         <div>{children}</div>
-        <Intercom appID="bnz5sax3" />
         <Footer
           logoFixed={data.footerLogo.childImageSharp.fixed}
           linkedinFixed={data.linkedin.childImageSharp.fixed}

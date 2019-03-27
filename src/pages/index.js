@@ -11,9 +11,13 @@ import WhyCardGrid from '../components/WhyCardGrid'
 import styles from '../styles/index.module.sass'
 
 class Index extends Component {
-  state = {
-    email: '',
-    emailSubmitted: false,
+  constructor() {
+    super()
+
+    this.state = {
+      email: '',
+      emailSubmitted: false,
+    }
   }
 
   handleChange = e => {
