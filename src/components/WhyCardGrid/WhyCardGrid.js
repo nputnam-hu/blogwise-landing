@@ -62,7 +62,7 @@ const WhyCardGrid = () => (
           <WhyCard
             iconFixed={data.pointer.childImageSharp.fixed}
             title="easy to manage"
-            description="Don’t waste time managing code or writing markdown files. Megaphone uses NetlifyCMS for a first-class writing and editing experience. Create your site and upload your first blog post in minutes."
+            description="Don’t waste time managing code or writing markdown files. blogwise bundles an elegant CMS (content management system) for a first-class writing and editing experience. Create your site and upload your first blog post in minutes."
           />
         </div>
       </>
