@@ -7,6 +7,11 @@ import WhyCardGrid from '../components/WhyCardGrid'
 
 import styles from '../styles/why-blogwise.module.sass'
 
+const companyLinks = {
+  'tutoringLogo.png': 'https://blog.hsatutoring.com',
+  // 'devLogo.png': 'https://blog.hsa.dev',
+}
+
 const WhyBlogwise = ({ data }) => (
   <Layout>
     <div className={styles.whyBlogwise}>
@@ -29,11 +34,13 @@ const WhyBlogwise = ({ data }) => (
           <h1>Companies that use blogwise</h1>
           <div className={styles.companiesSection__imgs}>
             {data.companies.edges.map(({ node }) => (
+              <a href={companyLinks[node.childImageSharp.fixed.originalName]} target="_blank" rel="noreferrer nooponner">
               <Img
                 fixed={node.childImageSharp.fixed}
                 alt={node.name}
                 className={styles.companiesSection__img}
               />
+              </a>
             ))}
           </div>
         </div>
@@ -52,6 +59,7 @@ export const pageQuery = graphql`
           name
           childImageSharp {
             fixed(height: 100) {
+              originalName
               ...GatsbyImageSharpFixed
             }
           }
