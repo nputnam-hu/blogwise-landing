@@ -58,7 +58,7 @@ export const pageQuery = graphql`
         node {
           name
           childImageSharp {
-            fixed(height: 100) {
+            fixed(height: 100, quality: 90) {
               originalName
               ...GatsbyImageSharpFixed
             }
