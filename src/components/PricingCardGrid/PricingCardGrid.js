@@ -7,15 +7,6 @@ import styles from './PricingCardGrid.module.sass'
 const PricingCardGrid = () => (
   <div className={styles.pricingCardGrid}>
     <PricingCard
-      bgColor="#DCDCDC"
-      title="Free"
-      price="0"
-      userNum="1"
-      pageViews="5k"
-      branding
-      description="for a blog that will do the trick"
-    />
-    <PricingCard
       bgColor="#e6faff"
       title="Starter"
       price="18"
