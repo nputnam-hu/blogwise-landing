@@ -7,6 +7,7 @@ const PricingCard = ({
   bgColor,
   title,
   price,
+  strikethrough = false,
   userNum,
   pageViews,
   branding,
@@ -18,7 +19,14 @@ const PricingCard = ({
       <div className={styles.pricingCard__top__title}>{title}</div>
     </div>
     <div className={styles.pricingCard__body}>
-      <div className={styles.pricingCard__body__price}>${price}</div>
+      <div className={styles.pricingCard__body__price}>
+        ${price}
+        {strikethrough && (
+          <div className={styles.pricingCard__body__price__strikethrough}>
+            {` ${strikethrough}`}
+          </div>
+        )}
+      </div>
       <div className={styles.pricingCard__body__perMonth}>
         per month, billed monthly
       </div>

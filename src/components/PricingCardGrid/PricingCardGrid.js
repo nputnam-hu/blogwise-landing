@@ -9,7 +9,8 @@ const PricingCardGrid = () => (
     <PricingCard
       bgColor="#e6faff"
       title="Starter"
-      price="18"
+      price="9"
+      strikethrough="18"
       userNum="2"
       pageViews="10k"
       description="for small businesses"
