@@ -19,7 +19,7 @@ const PricingCardGrid = () => (
     <PricingCard
       bgColor="rgba(103, 180, 249, 0.4)"
       title="Growth"
-      price="38"
+      price="29"
       userNum="5"
       pageViews="100k"
       description="for scaling startups"
@@ -27,7 +27,7 @@ const PricingCardGrid = () => (
     <PricingCard
       bgColor="rgba(59, 103, 226, 0.4)"
       title="Enterprise"
-      price="68"
+      price="59"
       userNum="Unlimited"
       pageViews="1 million"
       description="for businesses killing the marketing game"
