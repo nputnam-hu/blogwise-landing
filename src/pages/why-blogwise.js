@@ -9,6 +9,7 @@ import styles from '../styles/why-blogwise.module.sass'
 
 const companyLinks = {
   'tutoringLogo.png': 'https://blog.hsatutoring.com',
+  'hsalogo.png': 'https://blog.hsa.net',
   // 'devLogo.png': 'https://blog.hsa.dev',
 }
 

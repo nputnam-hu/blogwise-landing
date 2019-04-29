@@ -14,6 +14,9 @@
   background: $whiteTheme
   box-shadow: 3px 3px 4px 1px $shadowColor
 
+  @media (max-width: 350px)
+    width: 80%
+
 .pricingCard__top
   height: 72px
   width: 100%
@@ -40,6 +43,15 @@
   margin-bottom: 12px
   font-size: 32px
   font-weight: bold
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-content: center
+
+.pricingCard__body__price__strikethrough
+  text-decoration: line-through
+  color: $greyFontColor
+  margin-left: 12px
 
 .pricingCard__body__perMonth
   font-size: calc(12px + .2vw)
