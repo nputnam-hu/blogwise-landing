@@ -58,6 +58,7 @@ const TemplateWrapper = ({ children }) => (
     render={data => (
       <div className={styles.layout}>
         <Helmet>
+          <link rel="stylesheet" href="https://use.typekit.net/nxa2kay.css" />
           <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>
           <meta

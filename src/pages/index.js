@@ -5,8 +5,6 @@ import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import Layout from '../components/Layout'
 import MarketingBanner from '../components/MarketingBanner'
-import PostGenius from '../components/PostGenius'
-import WhyCardGrid from '../components/WhyCardGrid'
 
 import styles from '../styles/index.module.sass'
 
@@ -118,7 +116,7 @@ class Index extends Component {
           </div>
           {/* PostGenius Section */}
           <div className={styles.postSection}>
-            <PostGenius />
+            {/* <PostGenius /> */}
             <div className={styles.postSection__features}>
               <Img
                 fluid={data.cycle.childImageSharp.fluid}
@@ -167,7 +165,6 @@ class Index extends Component {
           {/* Why Section */}
           <div className={styles.whySection}>
             <div className={styles.whySection__title}>Why Blogwise?</div>
-            <WhyCardGrid />
           </div>
           {/* Future Section */}
           <MarketingBanner />

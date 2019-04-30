@@ -42,7 +42,7 @@ class Hamburger extends Component {
       },
       bmBurgerBars: {
         display: 'block',
-        background: 'white',
+        background: '#343333',
       },
     }
     const defaultStyles = {
@@ -99,13 +99,6 @@ class Hamburger extends Component {
             <Link
               onClick={() => this.setState({ hamburgerDisplay: true })}
               className={styles.navbar__linkMobile}
-              to="/features"
-            >
-              Features
-            </Link>
-            <Link
-              onClick={() => this.setState({ hamburgerDisplay: true })}
-              className={styles.navbar__linkMobile}
               to="/why-blogwise"
             >
               Why Blogwise
@@ -125,6 +118,12 @@ class Hamburger extends Component {
               className={styles.navbar__linkMobile}
             >
               Blog
+            </a>
+            <a
+              href="https://app.blogwise.co/login"
+              className={styles.navbar__linkMobile}
+            >
+              Log In
             </a>
             <a
               href="https://app.blogwise.co/register"

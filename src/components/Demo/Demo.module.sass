@@ -1,0 +1,73 @@
+@import ../../styles/global
+
+.presentation
+  display: flex
+  flex-direction: row
+  padding: 40px 0px
+  @media ($largeBreak)
+    flex-direction: column
+    align-items: center
+
+.presentation__gif
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
+  width: 600px
+  height: 400px
+  border-radius: 5px
+  @media ($mobileBreak)
+    height: auto
+    width: 100%
+
+.presentation__text
+  margin-left: 50px
+  @media ($largeBreak)
+    margin-left: 0px
+
+.presentation__paragraph
+  color: rgba(0, 0, 0, 0.6)
+  font-weight: 300
+  font-size: 18px
+
+.demo
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 75px 12.5%
+  width: 75%
+  @media ($largeBreak)
+    margin: 50px 5%
+    width: 90%
+  @media ($mobileBreak)
+    margin: 50px 2% -40px
+    width: 96%
+
+.inactiveicon
+  height: 80px
+  path
+    fill: #C4C4C4
+
+.activeicon
+  height: 80px
+  path
+    fill: #447ADD
+
+.demo__tabs
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  width: 100%
+
+.tabLine
+  margin-top: 10px
+  display: flex
+  flex-direction: row
+  width: 100%
+
+.tabLine__segment
+  width: 33%
+  border-bottom: 1px solid rgba(77, 125, 205, 0.2)
+
+  &.active
+    border-bottom: 3px solid #447ADC
+
+  

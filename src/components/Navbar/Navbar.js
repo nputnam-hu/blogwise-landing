@@ -16,9 +16,6 @@ class Navbar extends React.Component {
             <Img fixed={this.props.logoFixed} alt="Blogwise" />
           </Link>
           <nav>
-            <Link className={styles.navbar__link} to="/features">
-              Features
-            </Link>
             <Link className={styles.navbar__link} to="/why-blogwise">
               Why Blogwise
             </Link>
