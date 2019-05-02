@@ -21,7 +21,7 @@ const PricingCardGrid = () => (
       title="Growth"
       price="29"
       userNum="5"
-      pageViews="50k"
+      pageViews="15k"
       description="for scaling startups"
     />
     <PricingCard
@@ -29,7 +29,7 @@ const PricingCardGrid = () => (
       title="Enterprise"
       price="59"
       userNum="Unlimited"
-      pageViews="500k"
+      pageViews="50k"
       description="for businesses killing the marketing game"
     />
   </div>
