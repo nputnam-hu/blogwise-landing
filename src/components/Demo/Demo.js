@@ -25,40 +25,32 @@ class Demo extends Component {
   setActiveTab = i => () => this.setState({ activeTab: i })
   render() {
     const { activeTab } = this.state
-    let presentationProps
-    switch (activeTab) {
-      case 0:
-        presentationProps = {
-          gifUri: setup,
-          title: 'Build your blog in 5 minutes',
-          paragraph1:
-            "Answer a few questions and we'll be able to set up an initial blog for you. Connect the blog to a domain you own and write a few articles and you'll be on your way to building a loyal audience.",
-          paragraph2:
-            "Once you've built your initial blog, use our integrated blog editor to customize it fully to your company's brand.",
-        }
-        break
-      case 1:
-        presentationProps = {
-          gifUri: inspiration,
-          title: 'Tools to Empower Your Creativity',
-          paragraph1:
-            'We are making content creation streamlined so you can have a great blog and scale your company. Every blog is bundled with tools for generating click-worthy headlines, finding free, professional cover photos, and compiling relevant links from twitter.',
-          paragraph2: '',
-        }
-        break
-      case 2:
-        presentationProps = {
-          gifUri: smartTools,
-          title: 'View your changes in real time',
-          paragraph1:
-            'Manage everything about your blog in one place: connect a custom domain, upload brand assets, and write articles all on our dashboard.',
-          paragraph2:
-            'Our live preview tools lets you preview how your audience will see your blog and posts.',
-        }
-        break
-      default:
-        break
-    }
+    const presentationProps = [
+      {
+        gifUri: setup,
+        title: 'Build your blog in 5 minutes',
+        paragraph1:
+          "Answer a few questions and we'll be able to set up an initial blog for you. Connect the blog to a domain you own and write a few articles and you'll be on your way to building a loyal audience.",
+        paragraph2:
+          "Once you've built your initial blog, use our integrated blog editor to customize it fully to your company's brand.",
+      },
+      {
+        gifUri: inspiration,
+        title: 'Tools to Empower Your Creativity',
+        paragraph1:
+          'We are making content creation streamlined so you can have a great blog and scale your company. Every blog is bundled with tools for generating click-worthy headlines, finding free, professional cover photos, and compiling relevant links from twitter.',
+        paragraph2: '',
+      },
+      {
+        gifUri: smartTools,
+        title: 'View your changes in real time',
+        paragraph1:
+          'Manage everything about your blog in one place: connect a custom domain, upload brand assets, and write articles all on our dashboard.',
+        paragraph2:
+          'Our live preview tools lets you preview how your audience will see your blog and posts.',
+      },
+    ]
+
     return (
       <div className={styles.demo}>
         <div className={styles.demo__tabs}>
@@ -98,7 +90,7 @@ class Demo extends Component {
             }`}
           />
         </div>
-        <DemoPresentation {...presentationProps} />
+        <DemoPresentation {...presentationProps[activeTab]} />
       </div>
     )
   }
