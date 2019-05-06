@@ -135,15 +135,6 @@ const TemplateWrapper = ({ children, footerIsBlue }) => (
               async
               src="https://www.googletagmanager.com/gtag/js?id=UA-135783812-1"
             />
-            <noscript>
-              <img
-                height="1"
-                width="1"
-                style={{ display: 'none' }}
-                alt=""
-                src="https://dc.ads.linkedin.com/collect/?pid=1064858&fmt=gif"
-              />{' '}
-            </noscript>
           </Helmet>
           <Navbar logoFixed={data.navbarLogo.childImageSharp.fixed} />
           <>{children}</>
