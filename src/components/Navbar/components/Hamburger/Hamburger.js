@@ -16,7 +16,7 @@ class Hamburger extends Component {
       },
       bmCross: {
         display: 'block',
-        background: '#333',
+        background: '#C4C4C4',
         right: '20px',
         top: '40px',
         marginTop: '-30px',
@@ -35,14 +35,14 @@ class Hamburger extends Component {
       },
       bmCross: {
         display: 'none',
-        background: '#333',
+        background: 'white',
         right: '20px',
         marginTop: '-10px',
         paddingBottom: '20px',
       },
       bmBurgerBars: {
         display: 'block',
-        background: '#343333',
+        background: '#C4C4C4',
       },
     }
     const defaultStyles = {
