@@ -31,14 +31,14 @@ const featureCardProps = [
     title: 'Twitter integration',
     color: '#67B4F9',
     description:
-      'Our templates autopopulate your information - so you never have to struggle with broken customization tools.',
+      'We pull in tweets relevant to articles you want to write so you can get inspiration from what other people are talking about.',
   },
   {
     img: search,
     title: 'Search Optimization',
     color: '#FFC702',
     description:
-      'Our templates autopopulate your information - so you never have to struggle with broken customization tools.',
+      "Don't waste time worrying about the technical details of your blog. We use automated tools to give your site the benefis of SEO, all under the hood",
   },
   {
     img: edit,
@@ -52,7 +52,7 @@ const featureCardProps = [
     title: 'Ready-made stock photos',
     color: '#447ADD',
     description:
-      'Our templates autopopulate your information - so you never have to struggle with broken customization tools.',
+      'Search for free professional stock photos, directly in the blog post editor.',
   },
 ]
 

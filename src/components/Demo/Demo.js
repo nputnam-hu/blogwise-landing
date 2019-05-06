@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 import DemoTab from './DemoTab'
 import styles from './Demo.module.sass'
-import setup from './setup.gif'
-import inspiration from './inspiration.gif'
-import smartTools from './smartTools.gif'
+import setup from './setup.webm'
+import inspiration from './inspiration.webm'
+import smartTools from './smartTools.webm'
 
-const DemoPresentation = ({ gifUri, title, paragraph1, paragraph2 }) => (
+const DemoPresentation = ({ videoUri, title, paragraph1, paragraph2 }) => (
   <div className={styles.presentation}>
     <div style={{ margin: 'auto' }}>
-      <img className={styles.presentation__gif} alt="Demo" src={gifUri} />
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <video
+        className={styles.presentation__video}
+        alt="Demo"
+        src={videoUri}
+        autoPlay
+        loop
+      />
     </div>
     <div className={styles.presentation__text}>
       <h2 className={styles.presentation__title}>{title}</h2>
@@ -27,7 +34,7 @@ class Demo extends Component {
     const { activeTab } = this.state
     const presentationProps = [
       {
-        gifUri: setup,
+        videoUri: setup,
         title: 'Build your blog in 5 minutes',
         paragraph1:
           "Answer a few questions and we'll be able to set up an initial blog for you. Connect the blog to a domain you own and write a few articles and you'll be on your way to building a loyal audience.",
@@ -35,14 +42,14 @@ class Demo extends Component {
           "Once you've built your initial blog, use our integrated blog editor to customize it fully to your company's brand.",
       },
       {
-        gifUri: inspiration,
+        videoUri: inspiration,
         title: 'Tools to Empower Your Creativity',
         paragraph1:
           'We are making content creation streamlined so you can have a great blog and scale your company. Every blog is bundled with tools for generating click-worthy headlines, finding free, professional cover photos, and compiling relevant links from twitter.',
         paragraph2: '',
       },
       {
-        gifUri: smartTools,
+        videoUri: smartTools,
         title: 'View your changes in real time',
         paragraph1:
           'Manage everything about your blog in one place: connect a custom domain, upload brand assets, and write articles all on our dashboard.',
