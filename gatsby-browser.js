@@ -14,8 +14,14 @@
 exports.onInitialClientRender = () => {
   if (typeof window !== `undefined`) {
     _linkedin_partner_id = '1064858'
+    console.log(window._linkedin_data_partner_ids)
     window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []
-    window._linkedin_data_partner_ids.push(_linkedin_partner_id)(function() {
+    console.log(
+      window._linkedin_data_partner_ids,
+      window._linkedin_data_partner_ids.push
+    )
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id)
+    ;(function() {
       var s = document.getElementsByTagName('script')[0]
       var b = document.createElement('script')
       b.type = 'text/javascript'
