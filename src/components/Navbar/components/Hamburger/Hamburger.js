@@ -16,7 +16,7 @@ class Hamburger extends Component {
       },
       bmCross: {
         display: 'block',
-        background: '#333',
+        background: '#C4C4C4',
         right: '20px',
         top: '40px',
         marginTop: '-30px',
@@ -35,14 +35,14 @@ class Hamburger extends Component {
       },
       bmCross: {
         display: 'none',
-        background: '#333',
+        background: 'white',
         right: '20px',
         marginTop: '-10px',
         paddingBottom: '20px',
       },
       bmBurgerBars: {
         display: 'block',
-        background: 'white',
+        background: '#C4C4C4',
       },
     }
     const defaultStyles = {
@@ -99,13 +99,6 @@ class Hamburger extends Component {
             <Link
               onClick={() => this.setState({ hamburgerDisplay: true })}
               className={styles.navbar__linkMobile}
-              to="/features"
-            >
-              Features
-            </Link>
-            <Link
-              onClick={() => this.setState({ hamburgerDisplay: true })}
-              className={styles.navbar__linkMobile}
               to="/why-blogwise"
             >
               Why Blogwise
@@ -125,6 +118,12 @@ class Hamburger extends Component {
               className={styles.navbar__linkMobile}
             >
               Blog
+            </a>
+            <a
+              href="https://app.blogwise.co/login"
+              className={styles.navbar__linkMobile}
+            >
+              Log In
             </a>
             <a
               href="https://app.blogwise.co/register"

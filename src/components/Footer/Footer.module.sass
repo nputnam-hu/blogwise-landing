@@ -2,51 +2,42 @@
 
 .footer
   font-family: $primaryFont
-  background: #F4F4F4
-  padding-bottom: 20px
   position: absolute
   width: 100vw
-  margin-top: 40px
+  height: 72px
   bottom: 0
-  padding: 30px 40px
-  display: flex
-  flex-direction: column
-  overflow-x: hidden
-
-  @media (max-width: 425px)
-    width: auto
-
-.footer__bottom
+  padding: 0 40px
   display: flex
   flex-direction: row
-  justify-content: space-between
-
-  @media (max-width: 800px)
-    flex-direction: column-reverse
+  align-items: center
+  overflow-x: hidden
+  @media (max-width: 700px)
+    padding: 0 20px
 
 .footer__links
   display: flex
   flex-direction: row
-  align-self: flex-start
-  margin-top: 30px
-  font-family: Nunito
+  align-items: center
+  font-family: $primaryFont
   font-size: 13px
-  color: #6D6D6D
-
+  color: white
   span
-    margin-right: 60px
+    margin: 0 30px
 
   a
     text-decoration: none
-    color: #6D6D6D
+    color: white
     margin-right: 30px
 
 .footer__social
-  margin-top: -30px
   display: flex
   flex-direction: row
-  align-self: flex-end
-  margin-right: 70px
+  align-items: center
+  margin-left: auto
+  margin-right: 170px
+  margin-top: 12px
 
   a
     padding-right: 15px
+  @media (max-width: 700px)
+    display: none

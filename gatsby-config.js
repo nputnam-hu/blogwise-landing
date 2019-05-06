@@ -24,12 +24,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Source Serif Pro`, `Nunito:300,600,700`],
-      },
-    },
-    {
       resolve: 'gatsby-plugin-intercom-spa',
       options: {
         app_id: 'bnz5sax3',

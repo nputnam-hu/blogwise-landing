@@ -1,3 +1,4 @@
+/* eslint-disable */
 // const updateIntercom = () => {
 //   window.Intercom('update')
 // }
@@ -9,3 +10,32 @@
 //   // Track pageview with google analytics
 //   updateIntercom()
 // }
+
+exports.onInitialClientRender = () => {
+  if (typeof window !== `undefined`) {
+    _linkedin_partner_id = '1064858'
+    console.log(window._linkedin_data_partner_ids)
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []
+    console.log(
+      window._linkedin_data_partner_ids,
+      window._linkedin_data_partner_ids.push
+    )
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id)
+    ;(function() {
+      var s = document.getElementsByTagName('script')[0]
+      var b = document.createElement('script')
+      b.type = 'text/javascript'
+      b.async = true
+      b.src = 'https://snap.licdn.com/li.lms-analytics/insight.min.js'
+      s.parentNode.insertBefore(b, s)
+    })()
+
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+
+    gtag('config', 'UA-135783812-1')
+  }
+}

@@ -1,19 +1,15 @@
 import React, { Component } from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import Layout from '../components/Layout'
-import MarketingBanner from '../components/MarketingBanner'
-import PostGenius from '../components/PostGenius'
-import WhyCardGrid from '../components/WhyCardGrid'
-
 import styles from '../styles/index.module.sass'
+import FeatureCards from '../components/FeatureCards/FeatureCards'
 
 class Index extends Component {
   constructor() {
     super()
-
     this.state = {
       email: '',
       emailSubmitted: false,
@@ -36,32 +32,31 @@ class Index extends Component {
     const { data } = this.props
 
     return (
-      <Layout>
+      <Layout footerIsBlue>
         <div className={styles.index}>
           {/* Header Section */}
           <div className={styles.header}>
             <Img
-              fluid={data.upperSwoosh.childImageSharp.fluid}
-              style={{ position: 'absolute' }}
-              alt="woman with megaphone"
+              fluid={data.header.childImageSharp.fluid}
+              alt="People working to build a blog"
               className={styles.header__image}
             />
+            {/* <HeaderImage /> */}
             <div className={styles.header__content}>
               <div className={styles.header__content__title}>
-                <div className={styles.header__content__title__line}>
+                <h1 className={styles.header__content__title__line}>
                   You made the perfect product.
-                </div>
-                <div className={styles.header__content__title__line}>
+                </h1>
+                <h1 className={styles.header__content__title__line}>
                   Time to tell everyone.
-                </div>
+                </h1>
               </div>
-              <Img
-                fixed={data.mobile.childImageSharp.fixed}
-                alt="cloud of blogs"
-                className={styles.header__mobileImage}
-              />
               <div className={styles.header__content__body}>
-                <div className={styles.header__content__body__line}>
+                <div
+                  className={`${styles.header__content__body__line} ${
+                    styles.first
+                  }`}
+                >
                   blogwise is the easiest way to start content marketing for
                   your business. <br />
                   Sign up in minutes to get a full website hosted under your own
@@ -73,7 +68,7 @@ class Index extends Component {
                 </div>
               </div>
               <a
-                className={`${styles.header__button}`}
+                className={styles.header__button}
                 href="https://app.blogwise.co/register"
               >
                 Get Started
@@ -84,8 +79,7 @@ class Index extends Component {
           <div className={styles.midSection}>
             <div className={styles.midSection__text}>
               <div className={styles.midSection__text__title}>
-                Get your message out with a beautiful blog built in{' '}
-                <em>minutes</em>
+                Get your message out with a beautiful blog built in minutes
               </div>
               <div className={styles.midSection__text__body}>
                 Like actually in minutes, no joke
@@ -106,71 +100,32 @@ class Index extends Component {
               struggle with broken customization tools.{' '}
             </div>
           </div>
-          <Img
-            fluid={data.midSwoosh.childImageSharp.fluid}
-            style={{ position: 'absolute' }}
-            alt="swoosh"
-            className={styles.midSection__swoosh}
-          />
           <div className={styles.midSection__caption}>
-            Our templates autopopulate your information - <br /> so you never
+            Our templates autopopulate your information — <br /> so you never
             have to struggle with broken customization tools.{' '}
           </div>
-          {/* PostGenius Section */}
-          <div className={styles.postSection}>
-            <PostGenius />
-            <div className={styles.postSection__features}>
-              <Img
-                fluid={data.cycle.childImageSharp.fluid}
-                alt="feature cylce icon"
-                className={styles.postSection__features__image}
-              />{' '}
-              <div className={styles.postSection__features__featuresList}>
-                <div className={styles.featuresList__title}>
-                  PostGenius Features
-                </div>
-                <div className={styles.featureList__cards}>
-                  <div className={styles.card}>
-                    <div className={styles.card___title}>
-                      Twitter Integration
-                    </div>
-                    <div className={styles.card__description}>
-                      Stay in the know without leaving blogwise. We'll
-                      automatically pull tweets that we think are relevant to
-                      you.
-                    </div>
-                  </div>
-                  <div className={`${styles.card} ${styles.stagger}`}>
-                    <div className={styles.card___title}>
-                      Headline Generator
-                    </div>
-                    <div className={styles.card__description}>
-                      Having trouble of thinking of a catchy title or topic?
-                      We&apos;ve got you covered with an automated headline
-                      generator.
-                    </div>
-                  </div>
-                  <div className={styles.card}>
-                    <div className={styles.card___title}>
-                      Editorial Calendar
-                    </div>
-                    <div className={styles.card__description}>
-                      Our Editorial Calendar lets you schedule and assign posts,
-                      making planning a breeze whether you&apos;re just adding a
-                      couple posts or launching a full a campaign.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className={styles.toolSection}>
+            <h1>The tools you need to build a loyal audience</h1>
+            <span className={styles.toolSection__subheader}>
+              Establish your expertise, broaden the top of your funnel, and
+              convert leads into sales, all through your blog.
+            </span>
+            <div style={{ height: '80px' }} />
+            <FeatureCards />
+            <div style={{ height: '120px' }} />
+            <Link to="/why-blogwise" className={styles.toolSection__button}>
+              Explore More
+            </Link>
           </div>
-          {/* Why Section */}
-          <div className={styles.whySection}>
-            <div className={styles.whySection__title}>Why Blogwise?</div>
-            <WhyCardGrid />
+          <div className={styles.bottomSection}>
+            <h1>What are you waiting for? Reach your customers today!</h1>
+            <a
+              className={styles.bottomSection__button}
+              href="https://app.blogwise.co/register"
+            >
+              Get Started
+            </a>
           </div>
-          {/* Future Section */}
-          <MarketingBanner />
         </div>
       </Layout>
     )
@@ -181,17 +136,17 @@ export default Index
 
 export const pageQuery = graphql`
   query IndexQuery {
-    upperSwoosh: file(relativePath: { eq: "index-upperSwoosh.png" }) {
+    header: file(relativePath: { eq: "index-header.png" }) {
       childImageSharp {
-        fluid(maxHeight: 900) {
+        fluid(maxWidth: 542, maxHeight: 417, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    mobile: file(relativePath: { eq: "megaphone.png" }) {
+    ellipse: file(relativePath: { eq: "index-ellipse.png" }) {
       childImageSharp {
-        fixed(width: 200) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

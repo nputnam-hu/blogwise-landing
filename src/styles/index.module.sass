@@ -7,107 +7,74 @@
 .index
   overflow-x: hidden
   font-family: $primaryFont
+  margin-bottom: -70px
+  padding: 0
 
 ////////////////////
 // Header Section //
 ////////////////////
 
 .header
-  height: 950px
+  height: 850px
   width: auto
+  margin: 0 10%
 
   @media (max-width: 1600px)
-    height: 900px
-    width: auto
-
-  @media (max-width: 1500px)
-    height: 850px
-    width: auto
-
-  @media (max-width: 1400px)
     height: 800px
     width: auto
 
-  @media (max-width: 1300px)
+  @media (max-width: 1500px)
     height: 750px
     width: auto
 
-  @media (max-width: 1200px)
+  @media (max-width: 1400px)
     height: 700px
     width: auto
 
-  @media (max-width: 1100px)
+  @media (max-width: 1300px)
     height: 650px
     width: auto
 
-  @media (max-width: 1000px)
-    height: 510px
+  @media (max-width: 1200px)
+    height: 600px
     width: auto
 
-  @media ($mobileBreak)
-    height: auto
-    background: $blueTheme
+  @media (max-width: 1100px)
+    margin: 0 3%
+    height: 550px
+    width: auto
+
+  @media (max-width: 800px)
+    height: 450px
+    margin: 0 1%
 
 .header__image
   z-index: -1
-  top: 0px
-  right: 0
-  height: 950px
-  width: 990px
-
-  @media (max-width: 1600px)
-    height: 900px
-    width: 940px
-
-  @media (max-width: 1500px)
-    height: 850px
-    width: 890px
-
-  @media (max-width: 1400px)
-    height: 800px
-    width: 834px
-
-  @media (max-width: 1300px)
-    height: 750px
-    width: 780px
-
-  @media (max-width: 1200px)
-    height: 700px
-    width: 724px
-
-  @media (max-width: 1100px)
-    height: 650px
-    width: 673px
-
-  @media (max-width: 1000px)
-    height: 510px
-    width: 527px
-
-  @media ($mobileBreak)
-    display: none
-
+  width: 600px
+  position: absolute
+  left: 40vw
+  top: 100px
+  @media (max-width: 950px)
+    width: 500px !important
+    top: 120px
+  @media (max-width: 750px)
+    width: 300px !important
 .header__content
-  margin-top: 24px
+  margin-top: -400px
   margin-left: 6%
   display: flex
   flex-direction: column
   justify-content: space-between
   font-family: $primaryFont
-
-  @media ($mobileBreak)
-    margin-top: 0
-    margin-left: 0
-    display: flex
-    flex-direction: column
-    align-items: center
-    background: $blueTheme
-    color: $whiteFontColor
+  @media (max-width: 950px)
+    margin-top: -300px
+  @media (max-width: 750px)
+    margin-top: -200px
 
 .header__content__title
   @extend .headerFont
-
+  line-height: 46px
   margin-bottom: 24px
-  font-weight: bold
 
   @media ($midBreak)
     magin-top: 12px
@@ -116,21 +83,20 @@
   @media ($mobileBreak)
     width: 80%
     font-size: calc(22px + 3vw)
-    text-align: center
 
   @media ($smallBreak)
     font-size: calc(18px + 3vw)
     width: 70%
 
 .header__content__title__line
+  @extend .headerFont
+  font-weight: 600
+  margin-top: 0px
   margin-bottom: 12px
-
-  @media ($smallMidBreak)
-    margin-bottom: 24px
 
 .header__content__body
   @extend .bodyFont
-
+  line-height: 150%
   margin-top: 3%
   margin-bottom: 3%
   width: 375px
@@ -142,10 +108,6 @@
     margin-top: 0px
     margin-bottom: 12px
 
-  @media ($mobileBreak)
-    width: 80%
-    text-align: center
-
   @media ($smallMidBreak)
     width: 315px
 
@@ -154,14 +116,15 @@
 
 .header__content__body__line
   margin-bottom: 7%
-
-  @media ($mobileBreak)
-    margin-bottom: 12px
+  @media (max-width: 1000px)
+    margin-bottom: 170px
+.first
+  @media (max-width: 1000px)
+    display: none
 
 .header__button
-  @extend .yellowButton
+  @extend .blueButton
 
-  margin-top: 24px
   margin-bottom: 24px
 
   @media ($largeBreak)
@@ -187,6 +150,7 @@
   flex-direction: row-reverse
   align-items: top
   justify-content: flex-end
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.1)
 
   @media ($mobileBreak)
     margin-top: 24px
@@ -208,19 +172,19 @@
 
 .midSection__screenshot2
   height: auto
-  width: 450px
+  width: 500px
   z-index: 1
   box-shadow: 3px 3px 4px 1px $shadowColor
   margin-top: 155px
-  left: -70%
+  left: -20%
 
   @media ($mobileBreak)
     display: none
 
 .midSection__text
   margin-right: 5%
-  margin-left: 10%
-  width: 250px
+  // margin-left: 10%
+  width: 400px
   text-align: right
 
   @media (max-width: 1200px)
@@ -237,8 +201,11 @@
 
 .midSection__text__title
   font-family: $primaryFont
-  font-size: calc(18px + .5vw)
-  font-weight: bold
+  font-size: calc(20px + .5vw)
+  font-weight: semibold
+  line-height: 32px
+  margin-bottom: 25px
+  font-weight: 600
 
   @media ($mobileBreak)
     font-size: calc(18px + 3vw)
@@ -250,7 +217,7 @@
 
 .midSection__text__body
   font-size: 16px
-  font-style: italic
+  letter-spacing: 0.05em
 
   @media ($mobileBreak)
     font-size: calc(16px + 0.5vw)
@@ -270,10 +237,11 @@
   font-family: $primaryFont
   font-size: calc(18px + 0.2vw)
   font-style: bold
-  color: white
-  width: 45%
+  text-align: right
+  color: rgba(0, 0, 0, 0.6)
+  width: 35%
   margin-top: 128px
-  margin-left: 5%
+  margin-left: 15%
 
   @media (max-width: 1000px)
     width: 35%
@@ -289,7 +257,7 @@
   @media ($mobileBreak)
     display: inline
     margin-bottom: 24px
-    color: white
+    color: rgba(0, 0, 0, 0.6)
     width: 65%
     margin-left: -198px
 
@@ -359,114 +327,61 @@
 // PostGenius Section //
 /////////////////////////
 
-.postSection
-  margin-top: 164px
-  margin-left: auto
-  margin-right: auto
+.toolSection
+  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.1)
+  margin-top: 264px
+  padding-top: 100px
+  display: flex
+  flex-direction: column
+  align-items: center
+  background: rgba(236, 245, 252, 0.54)
+  height: 475px
+  @media ($mobileBreak)
+    padding-top: 30px
+    margin-top: 100px
+    height: 520px
+  h1
+    font-weight: 600
+    font-size: 36px
+    text-align: center
+
+.toolSection__subheader
+  line-height: 20px
+  margin-top: 10px
+  width: 470px
+  text-align: center
+  color: rgba(0, 0, 0, 0.6)
+  margin: 10px 4% 0
+
+.toolSection__button
+  @extend .blueButton
+  font-size: 14px
+  padding: 10px 22px
+  @media (max-width: 800px)
+    margin-top: 75px
+  @media (max-width: 600px)
+    margin-top: 50px
+
+.bottomSection
+  background: rgba(236, 245, 252, 0.54)
+  border: none
+  background-image: url('/index-ellipse.png')
+  background-position: 50% -2%
+  height: 397px
   display: flex
   flex-direction: column
   align-items: center
   justify-content: center
-  width: 90%
-
-  @media ($mobileBreak)
-    margin-top: 64px
-    margin-left: auto
-    margin-right: auto
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    width: 90%
-
-.postSection__features
-  margin-top: 24px
-  display: flex
-  align-items: flex-start
-  flex-direction: row
-  justify-content: space-around
-
-  @media ($mobileBreak)
-    margin-top: 0px
-    align-items: center
-    flex-direction: column
-
-.postSection__features__image
-  display: inline
-  width: 50%
-  max-width: 600px
-  margin-bottom: 28px
-
-  @media ($mobileBreak)
-    display: none
-
-.postSection__features__featuresList
-  width: 45%
-
-  @media ($mobileBreak)
-    width: 80%
-
-.featuresList__title
-  margin-left: -8%
-  margin-bottom: 24px
-  font-family: $primaryFont
-  font-size: calc(14px + 0.2vw)
-  font-weight: bold
-  color: $greyTheme
-  text-transform: uppercase
-
-  @media ($mobileBreak)
-    margin-left: 0px
-    margin-bottom: 16px
+  padding: 0
+  h1
     text-align: center
+    margin: 0 7%
+    color: white
+    font-weight: 600
 
-.featureList__cards
-  display: flex
-  flex-direction: column
-
-.card
-  margin-bottom: 15%
-
-  @media ($mobileBreak)
-    margin-bottom: 5%
-
-.card___title
-  margin-bottom: 12px
-  font-size: calc(16px + 0.5vw)
-  line-height: 1em
-  font-weight: bold
-
-  @media ($mobileBreak)
-    margin-bottom: 12px
-
-.card__description
-  font-size: calc(14px + 0.2vw)
-  line-height: 1.2em
-  margin-bottom: 12px
-
-.stagger
-  margin-left: 8%
-
-  @media ($mobileBreak)
-    margin-left: 0px
-
-//////////////////////////
-// Why blogwise Section //
-//////////////////////////
-
-.whySection
-  margin-top: 48px
-  display: flex
-  flex-direction: column
-  align-items: center
-
-  @media (max-width: 600px)
-    margin: 25px 5% 0px
-
-.whySection__title
-  margin-bottom: 50px
-  font-family: $primaryFont
-  font-size: calc(22px + 0.5vw)
-  text-transform: uppercase
-  font-weight: bold
-  color: $blueTheme
+.bottomSection__button
+  @extend .yellowButton
+  z-index: 10
+  color: #6C96E5
+  margin-top: 60px
+  margin-bottom: 10px

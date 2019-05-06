@@ -9,18 +9,6 @@ import styles from '../styles/pricing.module.sass'
 
 const Pricing = ({ data }) => (
   <Layout>
-    <Img
-      fixed={data.leftSwoosh.childImageSharp.fixed}
-      style={{ position: 'absolute' }}
-      alt="Left Swoosh"
-      className={styles.leftSwoosh}
-    />
-    <Img
-      fixed={data.rightSwoosh.childImageSharp.fixed}
-      style={{ position: 'absolute' }}
-      alt="Right Swoosh"
-      className={styles.rightSwoosh}
-    />
     <div className={styles.pricing}>
       <div className={styles.pricing__title}>Pricing Options</div>
       <PricingCardGrid />

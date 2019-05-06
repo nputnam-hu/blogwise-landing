@@ -1,23 +1,67 @@
 @import global
 
+.whySection
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 40%
+  @media ($mobileBreak)
+    width: 100%
+  h2
+    line-height: 140%
+    margin-top: 50px
+    margin-bottom: 1px
+  p
+    line-height: 140%
+    text-align: center
+    color: $blackFontColor
+    @media ($mobileBreak)
+      margin-bottom: 30px
+
+.founderSection
+  margin: 40px 30px 0px
+  h3
+    font-weight: 600
+    font-size: 18px
+    margin-bottom: -2px
+  p
+    color: rgba(0, 0, 0, 0.6)
+.founderSection__headshot
+  background-color: #f6f6f6
+  border: 1px solid #dadada
+  border-radius: 100px
+
+
 .whyBlogwise
   margin-top: 64px
-
+  margin-bottom: -70px
   @media ($mobileBreak)
     margin-top: 24px
+  h1, h2, h3
+    font-weight: 600
 
-.whyCards
+.demos
   width: 95%
   margin-left: auto
   margin-right: auto
 
-.whyCards__title
+.demos__title
   text-align: center
   font-size: calc(24px + 0.3vw)
   margin-left: auto
   margin-right: auto
   margin-bottom: 24px
   font-weight: bold
+  font-size: 40px
+
+.demos__subheader
+  color: rgba(0, 0, 0, 0.6)
+  text-align: center
+  width: 54%
+  margin: 0 auto
+  line-height: 150%
+  @media ($mobileBreak)
+    width: 95%
 
 ///////////////////////////
 // Easier Banner Section //
@@ -27,24 +71,29 @@
   margin-top: 96px
   display: flex
   flex-direction: column
-  justify-content: center
   align-items: center
-  width: 100%
-  height: 300px
+  padding: 50px 15%
+  width: 70%
   background: $skyBlueTheme
+  box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.1)
+  @media ($mobileBreak)
+    padding: 20px 3%
+    width: 94%
 
 .easierBanner__title
-  font-size: 28px
+  font-size: 33px
   text-align: center
   font-weight: bold
-  margin-bottom: 12px
+  margin-bottom: 50px
   width: 90%
 
 .easierBanner__body
-  text-align: center
-  font-size: 14px
-  width: 80%
-  max-width: 575px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  @media ($mobileBreak)
+    flex-direction: column
+    justify-content: center
 
 ///////////////////////
 // Companies Section //
@@ -56,10 +105,42 @@
   flex-direction: column
   align-items: center
   text-align: center
-
+  @media ($mobileBreak)
+    padding: 70px 2% 100px
   h1
+    line-height: 140%
+    width: 55%
+    @media ($mobileBreak)
+      width: 90%
+    @media ($smallMidBreak)
+      width: 95%
+  h4
+    color: rgba(0, 0, 0, 0.6)
     font-weight: 300
-    margin-bottom: 80px
+    font-size: 16px
+    margin-top: -5px
+
+.companiesSection__founderSections
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  @media ($mobileBreak)
+    flex-direction: column
+
+.founderSections__subSection
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+
+.founderSection__readMore
+  display: flex
+  align-items: center
+  text-decoration: none
+  color: #C4C4C4
+  margin-top: 30px
+  margin-bottom: 100px
 
 .companiesSection__imgs
   display: flex
@@ -67,8 +148,7 @@
   justify-content: space-around
   align-items: center
   flex-wrap: wrap
-  width: 80%
-
+  width: 60%
   @media (max-width: 800px)
     flex-direction: column
     justify-content: flex-start

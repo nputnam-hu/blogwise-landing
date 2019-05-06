@@ -7,13 +7,10 @@
   align-items: center
   justify-content: space-between
 
-  @media (max-width: 900px)
-    background: #67b4f9
-
   nav
     padding-right: 20px
 
-    @media (max-width: 1160px)
+    @media (max-width: 1000px)
       display: none
 
 .navbar__link
@@ -22,8 +19,8 @@
   margin-right: 50px
   text-transform: lowercase
   text-decoration: none
-  color: $blackFontColor
-  font-size: 22px
+  color: black
+  font-size: 21px
 
   @media (max-width: 900px)
     font-size: 18px
@@ -41,7 +38,7 @@
 .loginButton
   margin-right: 32px
   padding: 10px 33px
-  border: 4px solid $blueTheme
+  border: 1px solid #000000
   border-radius: 30px
   text-decoration: none
   font-size: 16px
@@ -52,7 +49,7 @@
 
 .signUpButton
   margin-left: 10px
-  padding: 13px 35px
+  padding: 11px 34px
   border-radius: 30px
   background-color: $blueTheme
   text-decoration: none
@@ -68,7 +65,7 @@
 .mobile
   display: none !important
 
-  @media (max-width: 1160px)
+  @media (max-width: 1000px)
     display: inline !important
     font-size: 22px
 
