@@ -44,7 +44,7 @@ $maxScreen: 1440px;
 
 .headerFont
   font-family: $primaryFont
-  font-size: calc(18px + 2vw)
+  font-size: calc(14px + 2vw)
   line-height: 1em
 
 .bodyFont
@@ -71,8 +71,23 @@ $maxScreen: 1440px;
   color: black
   text-transform: uppercase
 
+.blueButton
+  text-decoration: none
+  padding: 13px 20px
+  border-radius: 20px
+  font-weight: 300
+  max-width: 140px
+  font-size: 16px
+  background: #447ADD
+  letter-spacing: 0.05em
+  color: white
+  text-align: center
+  text-transform: uppercase
+  &:hover
+    background: #285AB7
+
 .yellowButton
-  border: none;
+  border: none
   text-decoration: none
   padding: 12px 45px
   font-size: 16px
@@ -83,6 +98,8 @@ $maxScreen: 1440px;
   text-transform: uppercase
   max-width: 150px
   text-align: center
+  &:hover
+    background: linear-gradient(180deg, #FFD833 0%, #F7d233 100%)
 
 
 ////////////////////////////////////////
@@ -100,7 +117,23 @@ body
   margin: 0
   padding-bottom: 8rem
   font-family: $primaryFont
+.slick-track
+  z-index: -1
+  display: flex !important
+  flex-direction: row !important
+  justify-content: center !important
+  align-items: center
+  height: 120px !important
+  margin: 0
+  @media (max-width: 800px)
+    height: 220px !important
+  &:hover
+    height: 220px !important
 
+.slick-slide
+  margin-top: 30px
+  &:hover
+    z-index: 100
 
 /////////////////////////////////////////
 // Settings for Different Font Effects //

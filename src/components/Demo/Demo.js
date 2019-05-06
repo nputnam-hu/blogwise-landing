@@ -42,7 +42,7 @@ class Demo extends Component {
           gifUri: inspiration,
           title: 'Tools to Empower Your Creativity',
           paragraph1:
-            'We are trying to make content creation as easy as possible for growing companies. Every blog is bundled with tools for generating click-worthy headlines, finding free, professional cover photos, and compiling relevant links from twitter.',
+            'We are making content creation streamlined so you can have a great blog and scale your company. Every blog is bundled with tools for generating click-worthy headlines, finding free, professional cover photos, and compiling relevant links from twitter.',
           paragraph2: '',
         }
         break
@@ -72,13 +72,13 @@ class Demo extends Component {
             isActive={activeTab === 1}
             onClick={this.setActiveTab(1)}
             icon="lightbulb"
-            headerText="Inspiration galore"
+            headerText="Smart tools"
           />
           <DemoTab
             isActive={activeTab === 2}
             onClick={this.setActiveTab(2)}
             icon="thumbsup"
-            headerText="Smart tools"
+            headerText="Intuitive Editor"
           />
         </div>
         <div className={styles.tabLine}>

@@ -1,0 +1,51 @@
+@import ../../styles/global
+
+.featureCard
+  background: #FFFFFF
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
+  border-radius: 5px
+  margin: 0 10px
+  padding: 15px 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 250px
+  transition: all 0.8s
+  img
+    height: 35px
+    width: 35px
+  h2
+    margin-top: 5px
+    margin-bottom: 0px
+    font-weight: 600
+    font-size: 18px
+  p
+    display: none
+    font-size: 15px
+    margin: 14px 15px
+    text-align: center
+    @media (max-width: 800px)
+      margin-top: 4px
+      display: inline
+  &:hover
+    @media (min-width: 800px)
+      transform: scale(1.05)
+      .slick-slide
+        z-index: 100
+    p
+      display: inline
+  
+.featureCards
+  width: 100vw
+  position: absolute
+  margin-top: 180px
+  @media (max-width: 800px)
+    margin-top: 200px
+  @media (max-width: 600px)
+    margin-left: 55px
+  @media (max-width: 400px)
+    margin-left: 35px
+
+  //   margin: 180px 10% 0
+//   .slick-track
+//     text-align: center

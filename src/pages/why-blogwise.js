@@ -67,26 +67,30 @@ const WhyBlogwise = ({ data }) => (
           </h1>
           <h4>Meet the team behind the scenes</h4>
           <div className={styles.companiesSection__founderSections}>
-            <FounderSection
-              fixed={data.noah.childImageSharp.fixed}
-              name="Noah Putnam"
-              title="CEO"
-            />
-            <FounderSection
-              fixed={data.dara.childImageSharp.fixed}
-              name="Dara Li"
-              title="COO"
-            />
-            <FounderSection
-              fixed={data.annelise.childImageSharp.fixed}
-              name="Annelise Hillmann"
-              title="CMO"
-            />
-            <FounderSection
-              fixed={data.ivraj.childImageSharp.fixed}
-              name="Ivraj Seerha"
-              title="CTO"
-            />
+            <div className={styles.founderSections__subSection}>
+              <FounderSection
+                fixed={data.noah.childImageSharp.fixed}
+                name="Noah Putnam"
+                title="CEO"
+              />
+              <FounderSection
+                fixed={data.dara.childImageSharp.fixed}
+                name="Dara Li"
+                title="COO"
+              />
+            </div>
+            <div className={styles.founderSections__subSection}>
+              <FounderSection
+                fixed={data.annelise.childImageSharp.fixed}
+                name="Annelise Hillmann"
+                title="CMO"
+              />
+              <FounderSection
+                fixed={data.ivraj.childImageSharp.fixed}
+                name="Ivraj Seerha"
+                title="CTO"
+              />
+            </div>
           </div>
           <a
             className={styles.founderSection__readMore}

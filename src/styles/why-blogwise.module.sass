@@ -8,9 +8,11 @@
   @media ($mobileBreak)
     width: 100%
   h2
+    line-height: 140%
     margin-top: 50px
     margin-bottom: 1px
   p
+    line-height: 140%
     text-align: center
     color: $blackFontColor
     @media ($mobileBreak)
@@ -32,9 +34,11 @@
 
 .whyBlogwise
   margin-top: 64px
-
+  margin-bottom: -70px
   @media ($mobileBreak)
     margin-top: 24px
+  h1, h2, h3
+    font-weight: 600
 
 .demos
   width: 95%
@@ -55,6 +59,7 @@
   text-align: center
   width: 54%
   margin: 0 auto
+  line-height: 150%
   @media ($mobileBreak)
     width: 95%
 
@@ -100,13 +105,15 @@
   flex-direction: column
   align-items: center
   text-align: center
-
+  @media ($mobileBreak)
+    padding: 70px 2% 100px
   h1
+    line-height: 140%
     width: 55%
     @media ($mobileBreak)
       width: 90%
     @media ($smallMidBreak)
-      width: 100%
+      width: 95%
   h4
     color: rgba(0, 0, 0, 0.6)
     font-weight: 300
@@ -120,6 +127,12 @@
   align-items: center
   @media ($mobileBreak)
     flex-direction: column
+
+.founderSections__subSection
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
 
 .founderSection__readMore
   display: flex
