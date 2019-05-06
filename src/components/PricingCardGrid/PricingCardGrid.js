@@ -12,7 +12,7 @@ const PricingCardGrid = () => (
       price="9"
       strikethrough="18"
       userNum="2"
-      pageViews="10k"
+      pageViews="5k"
       description="for small businesses"
       freeTrial
     />
@@ -21,15 +21,15 @@ const PricingCardGrid = () => (
       title="Growth"
       price="29"
       userNum="5"
-      pageViews="100k"
+      pageViews="15k"
       description="for scaling startups"
     />
     <PricingCard
       bgColor="rgba(59, 103, 226, 0.4)"
       title="Enterprise"
-      price="59"
+      price="99"
       userNum="Unlimited"
-      pageViews="1 million"
+      pageViews="50k"
       description="for businesses killing the marketing game"
     />
   </div>
