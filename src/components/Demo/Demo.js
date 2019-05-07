@@ -15,8 +15,7 @@ const DemoPresentation = ({ videoUri, title, paragraph1, paragraph2 }) => (
         src={videoUri}
         autoPlay
         loop
-        preload
-        playsinline
+        playsInline
         muted
       />
     </div>
