@@ -20,14 +20,14 @@ const DemoPresentation = ({
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
         className={styles.presentation__video}
-        alt="Demo"
         autoPlay
         loop
         playsInline
         muted
+        src={mp4Uri}
       >
-        <source type="video/webm" src={webmUri} />
-        <source type="video/mp4" src={mp4Uri} />
+        {/* <source type="video/webm" src={webmUri} />
+        <source type="video/mp4" src={mp4Uri} /> */}
       </video>
     </div>
     <div className={styles.presentation__text}>
