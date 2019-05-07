@@ -16,6 +16,8 @@ const DemoPresentation = ({ videoUri, title, paragraph1, paragraph2 }) => (
         autoPlay
         loop
         preload
+        playsinline
+        muted
       />
     </div>
     <div className={styles.presentation__text}>
