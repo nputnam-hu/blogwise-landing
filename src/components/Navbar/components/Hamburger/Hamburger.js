@@ -112,7 +112,7 @@ class Hamburger extends Component {
             </Link>
             <a
               onClick={() => this.setState({ hamburgerDisplay: true })}
-              href="https://blogwise-landing-archive.netlify.app"
+              href="https://blogwise-dashboard-archive.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.navbar__linkMobile}
@@ -120,13 +120,13 @@ class Hamburger extends Component {
               Blog
             </a>
             <a
-              href="https://blogwise-landing-archive.netlify.app"
+              href="https://blogwise-dashboard-archive.netlify.app"
               className={styles.navbar__linkMobile}
             >
               Log In
             </a>
             <a
-              href="https://blogwise-landing-archive.netlify.app"
+              href="https://blogwise-dashboard-archive.netlify.app"
               className={styles.navbar__linkMobile}
             >
               Sign Up
