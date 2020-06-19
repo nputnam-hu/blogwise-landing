@@ -24,7 +24,7 @@ class Navbar extends React.Component {
             </Link>
             <a
               className={styles.navbar__link}
-              href="https://blogwise-landing-archive.netlify.app"
+              href="https://blogwise-dashboard-archive.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -32,13 +32,13 @@ class Navbar extends React.Component {
             </a>
             <a
               className={styles.loginButton}
-              href="https://blogwise-landing-archive.netlify.app"
+              href="https://blogwise-dashboard-archive.netlify.app"
             >
               Login
             </a>
             <a
               className={styles.signUpButton}
-              href="https://blogwise-landing-archive.netlify.app"
+              href="https://blogwise-dashboard-archive.netlify.app"
             >
               Sign Up
             </a>
